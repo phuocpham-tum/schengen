@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>schengen: Schematic Editor</title>
+    <!-- add page icon -->
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+</head>
+<body>
+    {% include "menu.html" %}
+
+    <div class="schematic_container">
+
+        <!-- hidden functions for debugging and testing, will be removed in the final version -->
+        <div class="controls" id="manual_placement_tools">
+            
+
+            <div class="control-group" style="display: none;">
+                <label>Grid Rows</label>
+                <input type="number" id="rows" value="25" min="1" max="30">
+            </div>
+            
+            <div class="control-group" style="display: none;">
+                <label>Grid Columns</label>
+                <input type="number" id="cols" value="40" min="1" max="40">
+            </div>
+            
+            <button onclick="createGrid()" style="display: none;">Update Grid</button>
+            
+            <!-- <div style="width: 1px; height: 30px; background: #ddd; margin: 0 5px;"></div> -->
+            
+            <div class="control-group" style="display: none;">
+                <label>Row ID</label>
+                <input type="number" id="targetRow" value="0" min="0">
+            </div>
+            
+            <div class="control-group" style="display: none;">
+                <label>Column ID</label>
+                <input type="number" id="targetCol" value="0" min="0">
+            </div>
+            
+            <div class="control-group">
+                <select class="form-select" aria-label="Default select example" id="componentSelect">
+                    <option value="undefined" selected>Select component</option>
+                    <option value="pmos_normal_gate_left.png">PMOS Transistor (Normal, Gate on the left)</option>
+                    <option value="pmos_normal_gate_right.png">PMOS Transistor (Normal, Gate on the right)</option>
+                    <option value="pmos_diode_gate_left.png">PMOS Transistor (Diode-connected, Gate on the left)</option>
+                    <option value="pmos_diode_gate_right.png">PMOS Transistor (Diode-connected, Gate on the right)</option>
+                    <option disabled>_________</option>
+                    <option value="nmos_normal_gate_left.png">NMOS Transistor (Normal, Gate on the left)</option>
+                    <option value="nmos_normal_gate_right.png">NMOS Transistor (Normal, Gate on the right)</option>
+                    <option value="nmos_diode_gate_left.png">NMOS Transistor (Diode-connected, Gate on the left)</option>
+                    <option value="nmos_diode_gate_right.png">NMOS Transistor (Diode-connected, Gate on the right)</option>
+
+                    <option value="cap">Capacitor</option>
+                    <option value="resistor" disabled>Resistor</option>
+
+
+
+
+                </select>
+            </div>
+            
+            <button onclick="insertImage()">Place Component</button>
+            <button class="secondary" onclick="clearGrid()">Clear All</button>
+
+            <!-- add textbox for specifiying terminal ports -->
+            
+
+        </div>
+
+        <!-- button menu -->
+        <div class="control-group" style="display: flex; flex-direction: row; gap: 10px; margin-left: auto;">
+            <!-- set background transparent for button icons -->
+    
+            <div class="control-group" >
+                <button id="btnOpenSPICEFile" style="background: transparent; border: none;"><img src="static/open_icon.png" alt="Open File" style="width: 48px; height: 48px;"></button>
+                <label>Open SPICE File</label>
+            </div>
+       
+            <div class="control-group">
+                <button id="btnLoadConstraints" style="background: transparent; border: none;"><img src="static/load_icon.png" alt="Load Constraints" style="width: 48px; height: 48px;"></button>
+                <label>Load Constraints</label>
+            </div>
+
+            <div class="control-group">
+                <button id="btnSaveConstraints" style="background: transparent; border: none;"><img src="static/save_icon.png" alt="Save File" style="width: 48px; height: 48px;"></button>
+                <label>Save Constraints</label>
+            </div>
+            <div class="control-group">
+                <button id="btnAdjustGridSize" style="background: transparent; border: none;"><img src="static/grid_icon.png" alt="Adjust Grid Size" style="width: 48px; height: 48px;"></button>
+                <label>Adjust Grid Size</label>
+            </div>
+            <div class="control-group">
+                <button id="btnHideGridCells" style="background: transparent; border: none;"><img src="static/view_icon.png" alt="View Grid" style="width: 48px; height: 48px;"></button>
+                <label>Hide Grid Cells</label>
+            </div>
+
+            <div class="control-group">
+                <input type="text" id="txtTerminalPorts" placeholder="<set terminals>" style="width: 300px; margin-left: -10px;" >
+                <label style="text-align: left;">Terminal Ports (comma separated)</label>
+            </div>
+
+            <div class="control-group">
+                <label style="text-align: left; font-size: 16px;"><img src="static/off1.png" id="imgStatusLoadSPICENetlist" alt="Terminal Ports" style="width: 32px; height: 32px; margin-right: 5px;">Load SPICE Netlist</label>
+                <label style="text-align: left; font-size: 16px;"><img src="static/off1.png" id="imgStatusLoadConstraints" alt="Terminal Ports" style="width: 32px; height: 32px; margin-right: 5px;">Load/Set Constraints</label>
+            </div>
+
+
+            <div class="control-group" style="display: flex; flex-direction: row; gap: 5px; margin-left: auto;">
+                <div class="control-group">
+                    <button id="btnGenerateSchematic" style="background: transparent; border: none;"><img src="static/generate_icon.png" alt="Generate Schematic" style="width: 48px; height: 48px;"></button>
+                    <label>Generate Schematic</label>
+            </div>
+            <div class="control-group">
+                <button id="btnExportSchematic" style="background: transparent; border: none;"><img src="static/export_icon.png" alt="Export File" style="width: 48px; height: 48px;"></button>
+                <label>Export Schematic</label>
+            </div>
+        </div>
+
+
+        <!-- add placementRoutingFileInput hidden -->
+        <input type="file" id="placementRoutingFileInput" accept=".json" style="display:none" />
+        </div>
+
+
+        <!-- main content area -->
+        <div class="row" id="mainContent">
+            <!-- main canvas for schematic drawing -->
+            <div class="col-8" id="canvasColumn" style="background-color: #ffffff;">
+                <div class="canvas-wrapper">
+                    <div id="gridCanvas" class="grid-canvas">
+                        <div id="routingLayers"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- pannel for constraints specification and routing layer control -->
+            <div class="col-4" id="constraintsColumn">
+
+                <!-- routing layer control -->
+                <div class="routing-layer-controls">
+                    <div class="title">Routing Layers</div>
+                        <div class="routing-layer-actions">
+                            <button type="button" onclick="toggleAllRoutingLayers(true)">Enable All</button>
+                            <button type="button" class="secondary" onclick="toggleAllRoutingLayers(false)">Disable All</button>
+                        </div>
+                    <div id="routingLayerList" class="routing-layer-list"></div>
+                </div>
+
+                <!-- tabs for constraints specification -->
+                <ul class="nav nav-tabs" id="rightPanel" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="path-tab" data-bs-toggle="tab" data-bs-target="#tabpanel_pathbased" type="button" role="tab" aria-controls="home" aria-selected="true">Path-based</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="subcircuit-tab" data-bs-toggle="tab" data-bs-target="#tabpanel_subcircuit" type="button" role="tab" aria-controls="profile" aria-selected="false">Subcircuit-based</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="llm-tab" data-bs-toggle="tab" data-bs-target="#tabpanel_llm" type="button" role="tab" aria-controls="contact" aria-selected="false">LLM-generated</button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="user-tab" data-bs-toggle="tab" data-bs-target="#tabpanel_user" type="button" role="tab" aria-controls="user" aria-selected="false">User-defined</button>
+                    </li>
+
+                </ul>
+
+                <!-- tab contents -->
+                <div class="tab-content" id="myTabContent">
+
+                    <div class="tab-pane fade show active" id="tabpanel_pathbased" role="tabpanel" aria-labelledby="path-tab">
+                        <div id="selPathbasedConstraints" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body" style="font-size: 12pt;">
+                            <!-- Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. -->
+                                <div class="checkbox-item"><label><input type="checkbox" value="CONSTRAINT_1_SHARE_DRAIN_SOURCE_CONNECTION" checked> Components that share drain-source connections must be placed in the same column.</label></div>
+                                <div class="checkbox-item"><label><input type="checkbox" value="CONSTRAINT_1_SHARE_DRAIN_DRAIN_CONNECTION" checked> Components that share drain-drain connections must be placed in the same column.</label></div>
+
+                                <div class="checkbox-item"><label><input type="checkbox" value="CONSTRAINT_2_SORT_VDD_GND_TRACABILITY" checked> Place components vertically based on vdd-gnd tracability.</label></div>
+                                <div class="checkbox-item"><label><input type="checkbox" id="sel_P3" value="CONSTRAINT_3_SHARE_GATE_TO_GATE_CONNECTION"> Components that share gate-to-gate connections must be placed in the same row. Columns between them <u>need to be remain unoccupied</u>, meaning other components can not be placed in those columns.</label></div>
+                                <div class="checkbox-item"><label><input type="checkbox" id="sel_P3_1" value="CONSTRAINT_3_1_SHARE_GATE_TO_GATE_CONNECTION_NO_CLEAR_COLUMNS" checked> Components that share gate-to-gate connections must be placed in the same row. Columns between them <u>do not need to remain unoccupied</u>, meaning other components can be placed in those columns.</label></div>
+                                
+                                <div style="border-top: 1px dotted #535353; height: 1px; margin-bottom: 10px;"> </div>
+                                
+                                <div class="checkbox-item"><label><input type="radio" name="constraint_4" value="CONSTRAINT_4_SHARE_SOURCE_TO_SOURCE_CONNECTION" > Components that share source-to-source connections must be placed in the same row.</label></div>
+                                <div class="checkbox-item"><label><input type="radio" name="constraint_4" value="CONSTRAINT_4_SHARE_SOURCE_TO_SOURCE_CONNECTION_MAX_COLUMN_3" > Components that share source-to-source connections must be placed in the same row, and do not span more than 3 columns.</label></div>
+                                <div class="checkbox-item"><label><input type="radio" name="constraint_4" value="CONSTRAINT_4_IGNORE" checked> No constraints applied to components that share source-to-source connections.</label></div>
+                                <div style="border-top: 1px dotted #535353; height: 1px; margin-bottom: 10px;"> </div>
+                                
+
+
+                                <div style="border-top: 1px dotted #535353; height: 1px; margin-bottom: 10px;"> </div>
+                                <div class="checkbox-item"><label><input type="radio" value="CONSTRAINT_5_PLACE_SEPARATELY_2" name="constraint_5" checked> Components must be placed seperately (2 rows and 2 columns apart).</label></div>
+                                <div class="checkbox-item"><label><input type="radio" value="CONSTRAINT_5_PLACE_SEPARATELY_3" name="constraint_5" > Components must be placed seperately (3 rows and 3 columns apart).</label></div>
+                                <div style="border-top: 1px dotted #535353; height: 1px; margin-bottom: 10px;"> </div>
+                                
+                                <div class="checkbox-item"><label><input type="checkbox" value="CONSTRAINT_6_PLACE_VDD_DIFFERENT_COLUMN" checked> Components connected to <code>vdd!</code> must be placed in different column (to avoid routing congestion).</label></div>
+                                <div class="checkbox-item"><label><input type="checkbox" value="CONSTRAINT_7_DONT_PLACE_TOO_CLOSE_TO_BOUNDARIES" checked> Don't place components too close to schematic boundaries.</label></div>
+                                <div class="checkbox-item"><label><input type="checkbox" value="CONSTRAINT_8_PLACE_CAPACITORS_MIDDLE" checked> Place capacitors in the middle of the connected components (vertical alignment).</label></div>
+                                <div class="checkbox-item"><label><input type="checkbox" value="CONSTRAINT_9_PLACE_INPUT_PORTS_LEFT" checked> Place <strong>input ports</strong> on the left side of the connected components, and vertically aligned with the connected components.</label></div>
+                                <div class="checkbox-item"><label><input type="checkbox" value="CONSTRAINT_10_PLACE_OUTPUT_PORTS_RIGHT" checked> Place <strong>output ports</strong> on the right side of the connected components.</label></div>
+                                <div class="checkbox-item"><label><input type="checkbox" value="CONSTRAINT_11_PLACE_BIASING_PORTS_LEFT" checked> Place <strong>biasing ports</strong> on the left side of the connected components, between the row boundaries of the connected components.</label></div>
+                                <div class="checkbox-item"><label><input type="checkbox" value="CONSTRAINT_12_PLACE_VDD_PORTS_TOP_RIGHT" checked> Place <strong><code>vdd!</code> ports</strong> on the top right side of the generated schematic.</label></div>
+                                <div class="checkbox-item"><label><input type="checkbox" value="CONSTRAINT_13_PLACE_SAME_NET_CONNECTED_TERMINAL_IN_SAME_ROW_AND_CLEAR_COLUMN" checked> Place components that are connected by the same net close to each other, and ensure there is a clear column in between to facilitate routing.</label></div>
+
+
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="tabpanel_subcircuit" role="tabpanel" aria-labelledby="subcircuit-tab">
+                        Currently, we only accept the subcircuit and hierarchy (partitioning) information in form of pre-defined JSON data. 
+                        These information will be used to group the components in the same subcircuit together and do the floorplanning for each subcircuit separately. 
+
+
+                        <div class="mb-3" style="margin-top: 10px;">
+                        <label for="exampleFormControlTextarea1" class="form-label"><strong>Subcircuit Information</strong></label>
+                        <textarea class="form-control" id="txtSubcircuitInfo" rows="7" style="font-family: monospace;">
+{
+
+}
+                        </textarea>
+                        </div>
+
+
+
+                        <div class="mb-3" style="margin-top: 10px;">
+                        <label for="exampleFormControlTextarea1" class="form-label"><strong>Partitioning Information</strong></label>
+                        <textarea class="form-control" id="txtPartitioningInfo" rows="7" style="font-family: monospace;">
+{
+    "firstStage": [], 
+    "secondStage": [], 
+    "thirdStage": [], 
+    "stageBias": [],
+    "loads": []
+}
+                        </textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="tabpanel_llm" role="tabpanel" aria-labelledby="llm-tab">
+                        <div class="mb-3" style="margin-top: 10px;">
+                        <!-- <label for="exampleFormControlTextarea1" class="form-label">LLM-generated constraints</label> -->
+                        <!-- <div style="background-color: #f6f6f6;" class="desc">Use the provided prompts to query LLMs and obtained relevant constraints for the current netlist.</div> -->
+                        <p>The LLM-generated constraints should be in the format of a list of tuples, where each tuple represents a constraint. The first element of the tuple is the constraint name (a string), followed by the target component (a string), and then the related components (one or more strings). </p>
+                        <textarea class="form-control" id="txtLLMGeneratedConstraints" rows="17" style="font-family: monospace;">
+[
+
+]
+                        </textarea>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="tabpanel_user" role="tabpanel" aria-labelledby="user-tab">
+
+                        <div style="background-color: #f6f6f6;" class="desc">User can manually add more constraints using the similar constraint format as in the LLM tab.</div>
+
+                        <div class="mb-3" style="margin-top: 10px;">
+                        <label for="exampleFormControlTextarea1" class="form-label"><strong>Component's Placement Constraints</strong></label>
+                        <p>The User-defined constraints should be in the format of a list of tuples, where each tuple represents a constraint. The first element of the tuple is the constraint name (a string), followed by the target component (a string), and then the related components (one or more strings). In addition, don't include trailing commas in the list of tuples.</p>
+
+                        <textarea class="form-control" id="txtUserConstraints" rows="4" style="font-family: monospace;">
+[
+
+]
+                        </textarea>
+                        </div>
+
+
+                        <div class="mb-3" style="margin-top: 10px;">
+                        <label for="exampleFormControlTextarea1" class="form-label"><strong>Component's Orientation Constraints</strong></label>
+                        <p> The orientation constraints should be in the format of a dictionary, where the key is the component name (a string), and the value is either 0 or 1. Following is the gallery for reference: (<em>notice that we only show for MOS transistors and resistors, however, the orientation definitions are similar for other BJT transistors and components (e.g., capacitors)). </em> </p>
+                        
+                        <div style="align-content: center;">
+                            <center>
+                            <img src="static/pmos_normal_gate_right.png"  style="width: 64px; height: 64px; margin-bottom: 10px;">
+                            <label>:<strong>0</strong></label>
+
+                            <img src="static/pmos_normal_gate_left.png"  style="padding-left: 20px; width: 64px; height: 64px; margin-bottom: 10px;">
+                            <label>:<strong>1</strong></label>
+
+                            <img src="static/nmos_normal_gate_right.png"  style="width: 64px; height: 64px; margin-bottom: 10px;">
+                            <label>:<strong>0</strong></label>
+
+                            <img src="static/nmos_normal_gate_left.png"  style="padding-left: 20px; width: 64px; height: 64px; margin-bottom: 10px;">
+                            <label>:<strong>1</strong></label>
+
+
+                            <img src="static/two-terminals/resistor.png"  style="padding-left: 20px; width: 64px; height: 64px; margin-bottom: 10px;">
+                            <label>:<strong>0</strong></label>
+                            <img src="static/two-terminals/resistor_1.png"  style="padding-left: 20px; width: 64px; height: 64px; margin-bottom: 10px;">
+                            <label>:<strong>1</strong></label>
+                            </center>
+                        </div>
+
+
+                        
+                        <textarea class="form-control" id="txtOrientationData" rows="4" style="font-family: monospace;">
+{
+
+}
+                        </textarea>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- message box for user instruction and feedback -->
+        <div class="info" id="info">
+            <strong>How to use:</strong> Load SPICE netlist using the "File" menu, specifiy all the constraints (heuristic, path-based, subcircuit-based, LLM-generated, and user-defined) using the right panel. 
+            Once all the constraints are specified, click the <i>Generate Schematic</i> button to generate the schematic. The generated schematic will be displayed on the left canvas. You can also export the generated schematic in JSON format by clicking the <i>Export Schematic</i> button.
+        </div>
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/schengen.js') }}"></script>
+
+    <!-- Floating small toggle button attached to the right edge (near scrollbar) -->
+    <button id="toggleConstraintsPanelFloating" class="floating-toggle" aria-expanded="true" title="Toggle constraints panel">«</button>
+
+    <script>
+        (function () {
+            const container = document.querySelector('.schematic_container');
+            const rightColumn = document.getElementById('constraintsColumn');
+            // prefer the floating button, fallback to the old id if present
+            const button = document.getElementById('toggleConstraintsPanelFloating') || document.getElementById('toggleConstraintsPanel');
+
+            if (!container || !button || !rightColumn) {
+                return;
+            }
+
+            let isCollapsed = false;
+
+            function updatePanelState() {
+                container.classList.toggle('constraints-collapsed', isCollapsed);
+                // show a compact arrow: when collapsed show '»' to indicate open, when expanded show '«' to collapse
+                button.textContent = isCollapsed ? '»' : '«';
+                button.setAttribute('aria-expanded', String(!isCollapsed));
+            }
+
+            button.addEventListener('click', () => {
+                isCollapsed = !isCollapsed;
+                updatePanelState();
+                // let layout listeners redraw the canvas after the panel width changes
+                window.dispatchEvent(new Event('resize'));
+                window.dispatchEvent(new Event('schematic:layoutchange'));
+                requestAnimationFrame(() => {
+                    window.dispatchEvent(new Event('resize'));
+                });
+            });
+
+            updatePanelState();
+        })();
+    </script>
+</body>
+</html>

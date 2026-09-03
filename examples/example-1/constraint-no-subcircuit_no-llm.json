@@ -1,0 +1,29 @@
+{
+  "subcircuit_info": "{\n\n}\n",
+  "partitioning_info": "{\n    \"firstStage\": [], \n    \"secondStage\": [\"m10\", \"m11\"], \n    \"thirdStage\": [], \n    \"stageBias\": [\"m18\",\"m19\",\"m5\",\"m1\",\"m12\",\"m14\",\"m13\",\"m15\",\"m3\",\"m4\",\"m2\",\"m26\"],\n    \"loads\": [\"m17\", \"m25\", \"m16\", \"m24\", \"m8\", \"m9\"]\n}\n  ",
+  "llm_generated": "[\n   \n]",
+  "user_defined": "[\n\n]\n                ",
+  "orientation_constraints": "{\n   \n}\n                ",
+  "path_based_constraints": [
+    "CONSTRAINT_2_SORT_VDD_GND_TRACABILITY",
+    "CONSTRAINT_3_1_SHARE_GATE_TO_GATE_CONNECTION_NO_CLEAR_COLUMNS",
+    "CONSTRAINT_6_PLACE_VDD_DIFFERENT_COLUMN",
+    "CONSTRAINT_7_DONT_PLACE_TOO_CLOSE_TO_BOUNDARIES",
+    "CONSTRAINT_8_PLACE_CAPACITORS_MIDDLE",
+    "CONSTRAINT_9_PLACE_INPUT_PORTS_LEFT",
+    "CONSTRAINT_10_PLACE_OUTPUT_PORTS_RIGHT",
+    "CONSTRAINT_11_PLACE_BIASING_PORTS_LEFT",
+    "CONSTRAINT_12_PLACE_VDD_PORTS_TOP_RIGHT",
+    "CONSTRAINT_4_SHARE_SOURCE_TO_SOURCE_CONNECTION",
+    "CONSTRAINT_5_PLACE_SEPARATELY_2"
+  ],
+  "terminals": [
+    "in1",
+    "in2",
+    "out1",
+    "out2",
+    "vdd!",
+    "ibias",
+    "gnd!"
+  ]
+}

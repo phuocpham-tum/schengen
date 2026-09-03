@@ -1,0 +1,30 @@
+{
+    "subcircuit_info": "{\n  \"MosfetSimpleCurrentMirror[1]\": [\n    \"m1\",\n    \"m2\"\n  ],\n  \"MosfetSimpleCurrentMirror[2]\": [\n    \"m28\",\n    \"m29\"\n  ],\n  \"MosfetSimpleCurrentMirror[3]\": [\n    \"m17\",\n    \"m18\"\n  ],\n  \"MosfetSimpleCurrentMirror[4]\": [\n    \"m11\",\n    \"m12\"\n  ],\n  \"MosfetSimpleCurrentMirror[5]\": [\n    \"m21\",\n    \"m22\"\n  ],\n  \"MosfetSimpleCurrentMirror[6]\": [\n    \"m23\",\n    \"m24\"\n  ],\n  \"MosfetSimpleCurrentMirror[7]\": [\n    \"m19\",\n    \"m20\"\n  ],\n  \"MosfetDifferentialPair[1]\": [\n    \"m16\",\n    \"m15\"\n  ]\n}",
+    "partitioning_info": "{\n    \"firstStage\": [], \n    \"secondStage\": [], \n    \"thirdStage\": [], \n    \"stageBias\": [],\n    \"loads\": []\n}\n  ",
+    "llm_generated": "[[\"left_of\", \"m1\", \"m15\"], [\"left_of\", \"m2\", \"m15\"], [\"left_of\", \"m15\", \"m17\"], [\"left_of\", \"m16\", \"m18\"], [\"right_of\", \"m11\", \"m23\"], [\"right_of\", \"m12\", \"m24\"], [\"right_of\", \"m8\", \"m19\"], [\"right_of\", \"m10\", \"m20\"], [\"right_of\", \"m26\", \"m8\"], [\"right_of\", \"m28\", \"m11\"], [\"above\", \"m9\", \"m15\"], [\"above\", \"m9\", \"m16\"], [\"above\", \"m23\", \"m21\"], [\"above\", \"m21\", \"m19\"], [\"above\", \"m19\", \"m17\"], [\"above\", \"m24\", \"m22\"], [\"above\", \"m22\", \"m20\"], [\"above\", \"m20\", \"m18\"], [\"above\", \"m11\", \"m8\"], [\"above\", \"m12\", \"m10\"], [\"above\", \"m2\", \"m3\"], [\"above\", \"m1\", \"m4\"], [\"above\", \"m28\", \"m26\"], [\"above\", \"m29\", \"m27\"], [\"above\", \"m26\", \"m25\"], [\"above\", \"m27\", \"m25\"], [\"below\", \"m25\", \"m8\"], [\"row_proximity\", 2, \"m15\", \"m17\"], [\"row_proximity\", 2, \"m16\", \"m18\"], [\"row_proximity\", 3, \"r6\", \"m8\"], [\"row_proximity\", 3, \"r7\", \"m10\"], [\"column_proximity\", 2, \"c1\", \"m19\"], [\"column_proximity\", 2, \"c2\", \"m20\"], [\"cluster_proximity\", 4, \"m1\", \"m2\", \"m3\", \"m4\", \"m5\", \"m6\", \"m7\", \"r1\", \"r2\", \"r3\"], [\"cluster_proximity\", 5, \"m9\", \"m15\", \"m16\", \"m17\", \"m18\", \"m19\", \"m20\", \"m21\", \"m22\", \"m23\", \"m24\"], [\"cluster_proximity\", 4, \"m11\", \"m12\", \"m8\", \"m10\", \"r4\", \"r5\", \"r6\", \"r7\", \"c1\", \"c2\"], [\"cluster_proximity\", 3, \"m25\", \"m26\", \"m27\", \"m28\", \"m29\"], [\"between_columns\", \"m9\", \"m15\", \"m16\"], [\"between_columns\", \"m25\", \"m26\", \"m27\"], [\"same_row\", \"m1\", \"m2\"], [\"same_row\", \"m15\", \"m16\"], [\"same_row\", \"m17\", \"m18\"], [\"same_row\", \"m19\", \"m20\"], [\"same_row\", \"m21\", \"m22\"], [\"same_row\", \"m23\", \"m24\"], [\"same_row\", \"m11\", \"m12\"], [\"same_row\", \"m8\", \"m10\"], [\"same_row\", \"m28\", \"m29\"], [\"same_row\", \"m26\", \"m27\"], [\"same_row\", \"r2\", \"r3\"], [\"same_row\", \"r4\", \"r5\"], [\"same_row\", \"r6\", \"r7\"], [\"same_row\", \"c1\", \"c2\"], [\"same_column\", \"m23\", \"m21\"], [\"same_column\", \"m21\", \"m19\"], [\"same_column\", \"m19\", \"m17\"], [\"same_column\", \"m24\", \"m22\"], [\"same_column\", \"m22\", \"m20\"], [\"same_column\", \"m20\", \"m18\"], [\"same_column\", \"m11\", \"m8\"], [\"same_column\", \"m12\", \"m10\"], [\"same_column\", \"m28\", \"m26\"], [\"same_column\", \"m29\", \"m27\"], [\"same_column_above\", \"m1\", \"r1\"]]",
+    "user_defined": "[[\"same_row\", \"terminal_vrefcm\", \"m26\"], [\"column_proximity\", 3, \"terminal_vrefcm\", \"m26\"]]",
+    "orientation_constraints": "{}",
+    "path_based_constraints": [
+        "CONSTRAINT_1_SHARE_DRAIN_SOURCE_CONNECTION",
+        "CONSTRAINT_2_SORT_VDD_GND_TRACABILITY",
+        "CONSTRAINT_3_SHARE_GATE_TO_GATE_CONNECTION",
+        "CONSTRAINT_6_PLACE_VDD_DIFFERENT_COLUMN",
+        "CONSTRAINT_7_DONT_PLACE_TOO_CLOSE_TO_BOUNDARIES",
+        "CONSTRAINT_8_PLACE_CAPACITORS_MIDDLE",
+        "CONSTRAINT_9_PLACE_INPUT_PORTS_LEFT",
+        "CONSTRAINT_10_PLACE_OUTPUT_PORTS_RIGHT",
+        "CONSTRAINT_11_PLACE_BIASING_PORTS_LEFT",
+        "CONSTRAINT_12_PLACE_VDD_PORTS_TOP_RIGHT",
+        "CONSTRAINT_4_SHARE_SOURCE_TO_SOURCE_CONNECTION",
+        "CONSTRAINT_5_PLACE_SEPARATELY_2"
+    ],
+    "terminals": [
+        "inp",
+        "inn",
+        "outp",
+        "outm",
+        "vrefcm",
+        "vdd!",
+        "gnd!"
+    ]
+}

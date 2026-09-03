@@ -1,0 +1,36 @@
+m1 nref nref vdd! vdd! pmos
+m2 vntop nref vdd! vdd! pmos
+m3 vnbot vntop net1 gnd! nmos
+m4 net1 vnbot gnd! gnd! nmos
+m5 vpbot vnbot gnd! gnd! nmos
+m6 net3 vptop vdd! vdd! pmos
+m7 vptop vpbot net3 vdd! pmos
+r1 nref gnd! 1k
+r2 vntop vnbot 13.4k
+r3 vptop vpbot 13.4k
+m9 tail vptop vdd! vdd! pmos
+m15 foldp inp tail vdd! pmos
+m16 foldn inn tail vdd! pmos
+m17 foldp vnbot gnd! gnd! nmos
+m18 foldn vnbot gnd! gnd! nmos
+m19 vo1p vntop foldp gnd! nmos
+m20 vo1n vntop foldn gnd! nmos
+m21 vo1p vpbot ptl vdd! pmos
+m22 vo1n vpbot ptr vdd! pmos
+m23 ptl vcmfb vdd! vdd! pmos
+m24 ptr vcmfb vdd! vdd! pmos
+m11 outp vpbot vdd! vdd! pmos
+m12 outm vpbot vdd! vdd! pmos
+m8 outp vo1p gnd! gnd! nmos
+m10 outm vo1n gnd! gnd! nmos
+r4 outp vfcascmv 200k
+r5 outm vfcascmv 200k
+r6 outp ncp 4k
+c1 ncp vo1p 20f
+r7 outm ncn 4k
+c2 ncn vo1n 20f
+m25 ctail vnbot gnd! gnd! nmos
+m26 cn1 vrefcm ctail gnd! nmos
+m27 vcmfb vfcascmv ctail gnd! nmos
+m28 cn1 cn1 vdd! vdd! pmos
+m29 vcmfb cn1 vdd! vdd! pmos

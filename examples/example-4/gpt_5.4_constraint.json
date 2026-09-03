@@ -1,0 +1,30 @@
+{
+    "subcircuit_info": "{\n\"MosfetAnalogInverter[0]\": [\"m14\",\"m13\"],\n\"MosfetAnalogInverter[1]\": [\"m12\", \"m11\"],\n\"MosfetDifferentialPair[1]\": [\"m7\", \"m8\"],\n\"MosfetNmosDiodeAnalogInverter[1]\": [\"m10\", \"m9\"],\n\"MosfetPmosDiodeAnalogInverter[1]\": [\"m16\", \"m1\"],\n\"MosfetPmosDiodeAnalogInverter[2]\": [\"m17\", \"m2\"],\n\"MosfetSimpleCurrentMirror[1]\": [\"m3\", \"m5\"],\n\"MosfetSimpleCurrentMirror[2]\": [\"m9\", \"m11\"],\n\"MosfetSimpleCurrentMirror[3]\": [\"m15\", \"m6\", \"m1\", \"m2\", \"m13\"],\n\"MosfetSimpleCurrentMirror[7]\": [\"m17\", \"m12\"]\n\n\n\n}\n  ",
+    "partitioning_info": "{\n    \"firstStage\": [], \n    \"secondStage\": [], \n    \"thirdStage\": [], \n    \"stageBias\": [],\n    \"loads\": []\n}\n  ",
+    "llm_generated": "[[\"right_of\", \"m8\", \"m7\"], [\"right_of\", \"m2\", \"m1\"], [\"right_of\", \"m17\", \"m16\"], [\"right_of\", \"m12\", \"m11\"], [\"right_of\", \"m14\", \"m12\"], [\"above\", \"m3\", \"m7\"], [\"above\", \"m5\", \"m4\"], [\"above\", \"m16\", \"m1\"], [\"above\", \"m17\", \"m2\"], [\"above\", \"m10\", \"m9\"], [\"above\", \"m12\", \"m11\"], [\"above\", \"m14\", \"m13\"], [\"below\", \"m6\", \"m7\"], [\"below\", \"m15\", \"m13\"], [\"row_proximity\", 1, \"m7\", \"m8\"], [\"row_proximity\", 1, \"m1\", \"m2\"], [\"row_proximity\", 1, \"m16\", \"m17\"], [\"row_proximity\", 1, \"m11\", \"m12\"], [\"row_proximity\", 1, \"m13\", \"m14\"], [\"column_proximity\", 2, \"m16\", \"m1\"], [\"column_proximity\", 2, \"m17\", \"m2\"], [\"column_proximity\", 2, \"m10\", \"m9\"], [\"column_proximity\", 2, \"m12\", \"m11\"], [\"column_proximity\", 2, \"m14\", \"m13\"], [\"close_row\", \"m4\", \"m7\", 1], [\"close_row\", \"m5\", \"m3\", 1], [\"cluster_proximity\", 2, \"m7\", \"m8\", \"m4\", \"m5\", \"m3\", \"m6\"], [\"cluster_proximity\", 2, \"m1\", \"m2\", \"m15\", \"m13\", \"m6\"], [\"cluster_proximity\", 2, \"m9\", \"m10\", \"m11\", \"m12\"], [\"cluster_proximity\", 2, \"m13\", \"m14\", \"c1\", \"c2\", \"c3\"], [\"above_all\", 1, \"m3\"], [\"below_all\", 1, \"m15\"], [\"same_row\", \"m7\", \"m8\"], [\"same_row\", \"m1\", \"m2\"], [\"same_row\", \"m16\", \"m17\"], [\"same_row\", \"m11\", \"m12\"], [\"same_row\", \"m13\", \"m14\"], [\"same_row\", \"c1\", \"c2\"], [\"same_column\", \"m1\", \"m16\"], [\"same_column\", \"m2\", \"m17\"], [\"same_column\", \"m9\", \"m10\"], [\"same_column\", \"m11\", \"m12\"], [\"same_column\", \"m13\", \"m14\"], [\"same_column_above\", \"m16\", \"m1\"], [\"same_column_above\", \"m17\", \"m2\"], [\"same_column_above\", \"m10\", \"m9\"], [\"same_column_above\", \"m12\", \"m11\"], [\"same_column_above\", \"m14\", \"m13\"], [\"same_column_below\", \"m6\", \"m7\"], [\"same_column_below\", \"m15\", \"m13\"], [\"between_columns\", \"m6\", \"m7\", \"m8\"], [\"between_columns\", \"m15\", \"m1\", \"m2\", \"m13\"], [\"between_columns\", \"c3\", \"c1\", \"c2\"], [\"between_rows\", \"m4\", \"m8\", \"m5\"], [\"between_rows\", \"m13\", \"m14\", \"c3\"], [\"clear_row_between\", \"m7\", \"m8\"], [\"clear_row_between\", \"m1\", \"m2\"], [\"clear_row_between\", \"m16\", \"m17\"], [\"clear_column_between\", \"m11\", \"m12\"], [\"clear_column_between\", \"m13\", \"m14\"], [\"t_junction\", \"m6\", \"m7\", \"m8\"], [\"t_junction\", \"c3\", \"c1\", \"c2\"]]",
+    "user_defined": "[\n[\"t_junction\", \"m6\", \"m7\", \"m8\"]\n]\n                ",
+    "orientation_constraints": "{\n\"m16\": 1,\n\"m5\": 1,\n\"m12\": 1,\n\"m14\": 1\n}\n                ",
+    "path_based_constraints": [
+        "CONSTRAINT_1_SHARE_DRAIN_SOURCE_CONNECTION",
+        "CONSTRAINT_1_SHARE_DRAIN_DRAIN_CONNECTION",
+        "CONSTRAINT_2_SORT_VDD_GND_TRACABILITY",
+        "CONSTRAINT_3_SHARE_GATE_TO_GATE_CONNECTION",
+        "CONSTRAINT_6_PLACE_VDD_DIFFERENT_COLUMN",
+        "CONSTRAINT_7_DONT_PLACE_TOO_CLOSE_TO_BOUNDARIES",
+        "CONSTRAINT_8_PLACE_CAPACITORS_MIDDLE",
+        "CONSTRAINT_9_PLACE_INPUT_PORTS_LEFT",
+        "CONSTRAINT_10_PLACE_OUTPUT_PORTS_RIGHT",
+        "CONSTRAINT_11_PLACE_BIASING_PORTS_LEFT",
+        "CONSTRAINT_12_PLACE_VDD_PORTS_TOP_RIGHT",
+        "CONSTRAINT_4_SHARE_SOURCE_TO_SOURCE_CONNECTION",
+        "CONSTRAINT_5_PLACE_SEPARATELY_2"
+    ],
+    "terminals": [
+        "in1",
+        "in2",
+        "out",
+        "vdd!",
+        "gnd!",
+        "ibias"
+    ]
+}

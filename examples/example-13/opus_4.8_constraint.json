@@ -1,0 +1,29 @@
+{
+    "subcircuit_info": "{\n}\n",
+    "partitioning_info": "{\n\"firstStage\": [],\n\"secondStage\": [],\n\"thirdStage\": [],\n\"stageBias\": [],\n\"loads\": []\n}\n",
+    "llm_generated": "[[\"left_of\", \"m5\", \"m1\"], [\"right_of\", \"m11\", \"m1\"], [\"right_of\", \"m12\", \"m2\"], [\"right_of\", \"m13\", \"m11\"], [\"right_of\", \"m14\", \"m12\"], [\"above\", \"m4\", \"m1\"], [\"above\", \"m7\", \"m6\"], [\"above\", \"m9\", \"m8\"], [\"above\", \"m3\", \"m10\"], [\"above\", \"m12\", \"m11\"], [\"above\", \"m14\", \"m13\"], [\"below\", \"r1\", \"m1\"], [\"below\", \"r2\", \"m2\"], [\"row_proximity\", 2, \"c2\", \"m11\"], [\"row_proximity\", 2, \"c1\", \"m13\"], [\"cluster_proximity\", 3, \"m5\", \"m6\", \"m7\", \"m8\", \"m9\", \"m10\", \"m3\"], [\"cluster_proximity\", 2, \"m1\", \"m2\", \"m4\", \"r1\", \"r2\"], [\"cluster_proximity\", 2, \"m11\", \"m12\", \"c2\"], [\"cluster_proximity\", 2, \"m13\", \"m14\", \"c1\"], [\"same_row\", \"m1\", \"m2\"], [\"same_row\", \"r1\", \"r2\"], [\"same_row\", \"m5\", \"m6\"], [\"same_row\", \"m6\", \"m8\"], [\"same_row\", \"m8\", \"m10\"], [\"same_row\", \"m7\", \"m9\"], [\"same_row\", \"m9\", \"m3\"], [\"same_column_above\", \"m7\", \"m6\"], [\"same_column_above\", \"m9\", \"m8\"], [\"same_column_above\", \"m3\", \"m10\"], [\"same_column_above\", \"m12\", \"m11\"], [\"same_column_above\", \"m14\", \"m13\"], [\"between_columns\", \"m4\", \"m1\", \"m2\"], [\"between_columns\", \"c2\", \"m2\", \"m11\"], [\"between_columns\", \"c1\", \"m11\", \"m13\"]]",
+    "user_defined": "[\n]\n",
+    "orientation_constraints": "{\n}\n",
+    "path_based_constraints": [
+        "CONSTRAINT_1_SHARE_DRAIN_SOURCE_CONNECTION",
+        "CONSTRAINT_2_SORT_VDD_GND_TRACABILITY",
+        "CONSTRAINT_3_SHARE_GATE_TO_GATE_CONNECTION",
+        "CONSTRAINT_6_PLACE_VDD_DIFFERENT_COLUMN",
+        "CONSTRAINT_7_DONT_PLACE_TOO_CLOSE_TO_BOUNDARIES",
+        "CONSTRAINT_8_PLACE_CAPACITORS_MIDDLE",
+        "CONSTRAINT_9_PLACE_INPUT_PORTS_LEFT",
+        "CONSTRAINT_10_PLACE_OUTPUT_PORTS_RIGHT",
+        "CONSTRAINT_11_PLACE_BIASING_PORTS_LEFT",
+        "CONSTRAINT_12_PLACE_VDD_PORTS_TOP_RIGHT",
+        "CONSTRAINT_4_SHARE_SOURCE_TO_SOURCE_CONNECTION",
+        "CONSTRAINT_5_PLACE_SEPARATELY_2"
+    ],
+    "terminals": [
+        "ibias",
+        "in1",
+        "in2",
+        "out",
+        "vdd!",
+        "gnd!"
+    ]
+}

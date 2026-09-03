@@ -1,0 +1,28 @@
+{
+    "subcircuit_info": "{}",
+    "partitioning_info": "{\n    \"firstStage\": [], \n    \"secondStage\": [], \n    \"thirdStage\": [], \n    \"stageBias\": [],\n    \"loads\": []\n}\n  ",
+    "llm_generated": "[[\"right_of\", \"m1\", \"m6\"], [\"right_of\", \"m2\", \"m6\"], [\"right_of\", \"m3\", \"m7\"], [\"right_of\", \"m4\", \"m7\"], [\"right_of\", \"m11\", \"m1\"], [\"right_of\", \"m12\", \"m3\"], [\"right_of\", \"m17\", \"m11\"], [\"right_of\", \"m19\", \"m13\"], [\"right_of\", \"m20\", \"m16\"], [\"right_of\", \"m18\", \"m14\"], [\"above\", \"m3\", \"m1\"], [\"above\", \"m4\", \"m2\"], [\"below\", \"r1\", \"m1\"], [\"above\", \"m7\", \"m5\"], [\"above\", \"m8\", \"m9\"], [\"above\", \"m12\", \"m11\"], [\"above\", \"m13\", \"m14\"], [\"above\", \"m15\", \"m16\"], [\"above\", \"m17\", \"m18\"], [\"above\", \"m19\", \"m20\"], [\"cluster_proximity\", 3, \"m1\", \"m2\", \"m3\", \"m4\", \"r1\"], [\"cluster_proximity\", 3, \"m5\", \"m6\", \"m7\", \"m8\", \"m9\", \"m10\"], [\"cluster_proximity\", 3, \"m11\", \"m12\", \"m13\", \"m14\", \"m15\", \"m16\"], [\"cluster_proximity\", 3, \"m17\", \"m18\", \"m19\", \"m20\"], [\"cluster_proximity\", 3, \"r2\", \"r3\", \"c1\", \"c2\", \"m19\"], [\"same_row\", \"m1\", \"m2\"], [\"same_row\", \"m3\", \"m4\"], [\"same_row\", \"m5\", \"m6\"], [\"same_row\", \"m6\", \"m10\"], [\"same_row\", \"m7\", \"m8\"], [\"same_row\", \"m12\", \"m13\"], [\"same_row\", \"m13\", \"m15\"], [\"same_row\", \"m14\", \"m16\"], [\"same_row\", \"m17\", \"m19\"], [\"same_row\", \"m18\", \"m20\"], [\"same_column\", \"m3\", \"m1\"], [\"same_column\", \"m4\", \"m2\"], [\"same_column\", \"m7\", \"m5\"], [\"same_column\", \"m8\", \"m9\"], [\"same_column\", \"m12\", \"m11\"], [\"same_column\", \"m13\", \"m14\"], [\"same_column\", \"m15\", \"m16\"], [\"same_column\", \"m17\", \"m18\"], [\"same_column\", \"m19\", \"m20\"]]",
+    "user_defined": "[\n\n]\n                ",
+    "orientation_constraints": "{\"m1\": 1, \"m2\": 0}",
+    "path_based_constraints": [
+        "CONSTRAINT_1_SHARE_DRAIN_SOURCE_CONNECTION",
+        "CONSTRAINT_2_SORT_VDD_GND_TRACABILITY",
+        "CONSTRAINT_3_SHARE_GATE_TO_GATE_CONNECTION",
+        "CONSTRAINT_6_PLACE_VDD_DIFFERENT_COLUMN",
+        "CONSTRAINT_7_DONT_PLACE_TOO_CLOSE_TO_BOUNDARIES",
+        "CONSTRAINT_8_PLACE_CAPACITORS_MIDDLE",
+        "CONSTRAINT_10_PLACE_OUTPUT_PORTS_RIGHT",
+        "CONSTRAINT_11_PLACE_BIASING_PORTS_LEFT",
+        "CONSTRAINT_12_PLACE_VDD_PORTS_TOP_RIGHT",
+        "CONSTRAINT_4_SHARE_SOURCE_TO_SOURCE_CONNECTION",
+        "CONSTRAINT_5_PLACE_SEPARATELY_2"
+    ],
+    "terminals": [
+        "ibias",
+        "in1",
+        "in2",
+        "out",
+        "vdd!",
+        "gnd!"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+  "subcircuit_info": "{\n\"MosfetDifferentialPair[0]\": [\"m17\",\"m18\"],\n\"MosfetCascodeAnalogInverterNmosDiodeTransistor[0]\": [\"m13\", \"m4\", \"m22\", \"m27\"],\n\"MosfetCascodedAnalogInverter[0]\": [\"m14\", \"m5\", \"m23\", \"m28\"],\n\"MosfetCascodedAnalogInverter[1]\" : [\"m16\", \"m9\", \"m25\", \"m30\"],\n\"MosfetFourTransistorCurrentMirror[0]\": [\"m10\", \"m1\", \"m11\", \"m2\"],\n\"MosfetFourTransistorCurrentMirror[1]\": [\"m10\", \"m1\", \"m12\", \"m3\"],\n\"MosfetSimpleCurrentMirror[0]\": [\"m8\", \"m4\", \"m9\"],\n\"MosfetSimpleCurrentMirror[1]\": [\"m29\", \"m30\"],\n\"MosfetSimpleCurrentMirror[2]\": [\"m27\", \"m28\"],\n\"MosfetSimpleCurrentMirror[3]\": [\"m19\", \"m20\"],\n\"MosfetSimpleCurrentMirror[4]\": [\"m6\", \"m7\", \"m5\"]\n}\n  ",
+  "partitioning_info": "{\n\"firstStage\": [\"m18\", \"m17\"],\n\"secondStage\": [],\n\"loads\": [],\n\"stageBias\": []\n}\n  ",
+  "llm_generated": "[\n   \n]\n                ",
+  "user_defined": "[\n\n]\n                ",
+  "orientation_constraints": "{\n\n}\n                ",
+  "path_based_constraints": [
+    "CONSTRAINT_1_SHARE_DRAIN_SOURCE_CONNECTION",
+    "CONSTRAINT_1_SHARE_DRAIN_DRAIN_CONNECTION",
+    "CONSTRAINT_2_SORT_VDD_GND_TRACABILITY",
+    "CONSTRAINT_4_SHARE_SOURCE_TO_SOURCE_CONNECTION",
+    "CONSTRAINT_6_PLACE_VDD_DIFFERENT_COLUMN",
+    "CONSTRAINT_7_DONT_PLACE_TOO_CLOSE_TO_BOUNDARIES",
+    "CONSTRAINT_8_PLACE_CAPACITORS_MIDDLE",
+    "CONSTRAINT_9_PLACE_INPUT_PORTS_LEFT",
+    "CONSTRAINT_10_PLACE_OUTPUT_PORTS_RIGHT",
+    "CONSTRAINT_11_PLACE_BIASING_PORTS_LEFT",
+    "CONSTRAINT_12_PLACE_VDD_PORTS_TOP_RIGHT",
+    "CONSTRAINT_5_PLACE_SEPARATELY_2"
+  ],
+  "terminals": [
+    "ibias",
+    "in1",
+    "in2",
+    "output_n",
+    "output_p",
+    "vdd!",
+    "gnd!"
+  ]
+}

@@ -1,0 +1,14 @@
+c1 net1 out
+m1 net2 ibias gnd! gnd! nmos
+m2 net3 net3 vdd! vdd! pmos
+m3 net1 net2 net4 net4 pmos
+m4 net4 net3 vdd! vdd! pmos
+m5 net5 ibias gnd! gnd! nmos
+m6 net3 in1 net5 net5 nmos
+m7 net1 in2 net5 net5 nmos
+c2 out gnd!
+m8 out ibias gnd! gnd! nmos
+m9 out net2 net6 net6 pmos
+m10 net6 net1 vdd! vdd! pmos
+m11 ibias ibias gnd! gnd! nmos
+m12 net2 net2 vdd! vdd! pmos

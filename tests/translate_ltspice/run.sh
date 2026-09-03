@@ -1,0 +1,1 @@
+uv run src/translate_ltspice.py --schengen_result=tests/translate_ltspice/output-schematic.json

@@ -1,0 +1,30 @@
+{
+    "subcircuit_info": "{\n}\n",
+    "partitioning_info": "{\n\"firstStage\": [],\n\"secondStage\": [],\n\"thirdStage\": [],\n\"stageBias\": [],\n\"loads\": []\n}\n",
+    "llm_generated": "[\n]\n",
+    "user_defined": "[\n]\n",
+    "orientation_constraints": "{\n}\n",
+    "path_based_constraints": [
+        "CONSTRAINT_1_SHARE_DRAIN_SOURCE_CONNECTION",
+        "CONSTRAINT_2_SORT_VDD_GND_TRACABILITY",
+        "CONSTRAINT_3_SHARE_GATE_TO_GATE_CONNECTION",
+        "CONSTRAINT_6_PLACE_VDD_DIFFERENT_COLUMN",
+        "CONSTRAINT_7_DONT_PLACE_TOO_CLOSE_TO_BOUNDARIES",
+        "CONSTRAINT_8_PLACE_CAPACITORS_MIDDLE",
+        "CONSTRAINT_9_PLACE_INPUT_PORTS_LEFT",
+        "CONSTRAINT_10_PLACE_OUTPUT_PORTS_RIGHT",
+        "CONSTRAINT_11_PLACE_BIASING_PORTS_LEFT",
+        "CONSTRAINT_12_PLACE_VDD_PORTS_TOP_RIGHT",
+        "CONSTRAINT_4_SHARE_SOURCE_TO_SOURCE_CONNECTION",
+        "CONSTRAINT_5_PLACE_SEPARATELY_2"
+    ],
+    "terminals": [
+        "ibias",
+        "in1",
+        "in2",
+        "outp",
+        "outn",
+        "vdd!",
+        "gnd!"
+    ]
+}

@@ -1,0 +1,27 @@
+m1 net_diff1 in1 net_tail net_tail pmos
+m2 net_mid1 in2 net_tail net_tail pmos
+r1 net_diff1 gnd!
+r2 net_mid1 gnd!
+m3 net_bias7 net_bias7 vdd! vdd! pmos
+m4 net_tail net_bias7 vdd! vdd! pmos
+m5 ibias ibias gnd! gnd! nmos
+m6 bias_gen_feed_pref ibias gnd! gnd! nmos
+m7 bias_gen_feed_pref bias_gen_feed_pref vdd! vdd! pmos
+m8 bias_gen_ncasc bias_gen_feed_pref vdd! vdd! pmos
+m9 bias_gen_ncasc bias_gen_ncasc gnd! gnd! nmos
+m10 bias_gen_prefsrc ibias gnd! gnd! nmos
+m11 bias_gen_pref bias_gen_ncasc bias_gen_prefsrc gnd! nmos
+m12 bias_gen_pref bias_gen_pref vdd! vdd! pmos
+m13 net_bias5 bias_gen_pref vdd! vdd! pmos
+m14 net_bias5 net_bias5 gnd! gnd! nmos
+m15 net_bias6 ibias gnd! gnd! nmos
+m16 net_bias6 net_bias6 vdd! vdd! pmos
+m17 net_bias7 ibias gnd! gnd! nmos
+m18 second_stage_nmir net_mid1 gnd! gnd! nmos
+m19 net_mid2 second_stage_nmir vdd! vdd! pmos
+m20 second_stage_nmir second_stage_nmir vdd! vdd! pmos
+m21 net_mid2 net_bias5 gnd! gnd! nmos
+m22 out net_mid2 gnd! gnd! nmos
+m23 out net_bias6 vdd! vdd! pmos
+c1 net_mid1 out
+c2 net_mid2 out

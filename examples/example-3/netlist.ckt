@@ -1,0 +1,48 @@
+Q1 net_internal_10 net_internal_6 net_input_0 pnp
+R1 net_internal_10 -15V 3110178.7
+R2 net_internal_9 net_internal_4 161102112.9
+Q2 net_internal_17 -15V net_internal_13 pnp
+Q3 net_internal_4 net_internal_10 net_output_0 pnp
+Q4 net_output_0 net_internal_4 net_internal_17 npn
+R3 -15V net_internal_4 7615.4
+Q5 net_output_0 net_internal_24 net_internal_11 pnp
+Q6 net_internal_3 net_internal_6 net_internal_10 npn
+R4 net_internal_0 net_internal_6 617886.2
+R5 net_internal_0 net_internal_9 1000000000.0
+R6 +15V net_output_0 1155.5
+R7 GND net_internal_0 10918279.7
+R8 net_internal_5 net_internal_0 2408606.5
+R9 net_internal_5 net_internal_13 247270875.4
+Q7 net_internal_5 GND net_internal_2 pnp
+R10 net_internal_10 net_internal_5 690664162.6
+R11 net_output_0 net_internal_2 8234226.5
+R12 -15V net_input_0 2624416.3
+R13 net_internal_10 net_internal_13 579383811.9
+Q8 net_internal_19 net_internal_8 net_internal_8 pnp
+R14 net_internal_11 net_internal_8 1000000000.0
+Q9 net_internal_26 net_internal_8 net_internal_6 pnp
+R15 net_internal_4 net_internal_14 51281086.1
+R16 GND net_internal_23 210406.0
+Q10 GND net_internal_2 net_internal_5 pnp
+Q11 net_internal_5 net_internal_11 net_internal_1 pnp
+Q12 net_internal_5 net_output_0 net_internal_23 pnp
+R17 net_internal_3 net_internal_2 126965281.4
+R18 net_internal_21 net_internal_26 38850620.1
+Q13 net_internal_3 net_internal_14 net_internal_5 npn
+Q14 net_internal_13 net_internal_14 net_output_0 pnp
+R19 net_internal_1 net_internal_16 368418577.0
+Q15 net_internal_12 net_internal_26 net_internal_19 pnp
+Q16 net_internal_16 net_internal_12 -15V npn
+Q17 net_internal_22 net_internal_10 net_internal_7 pnp
+R20 net_internal_22 net_internal_5 160893.8
+Q18 net_internal_22 net_internal_20 net_internal_9 pnp
+Q19 -15V net_internal_9 net_internal_12 pnp
+R21 net_internal_24 net_input_0 84681453.6
+Q20 net_internal_16 net_internal_7 net_internal_12 pnp
+Q21 -15V net_internal_7 -15V pnp
+Q22 net_internal_20 net_internal_15 net_internal_5 pnp
+Q23 net_internal_15 net_internal_1 net_internal_9 npn
+R22 net_internal_21 net_internal_16 424487.3
+Q24 net_internal_8 net_internal_15 net_internal_11 pnp
+R23 net_output_0 net_internal_14 33433232.1
+Q25 net_internal_6 net_internal_23 net_internal_10 pnp

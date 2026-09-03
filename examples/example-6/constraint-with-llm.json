@@ -1,0 +1,30 @@
+{
+  "subcircuit_info": "{\n  \"MosfetSimpleCurrentMirror[1]\": [\n    \"m1\",\n    \"m2\"\n  ],\n  \"MosfetSimpleCurrentMirror[2]\": [\n    \"m28\",\n    \"m29\"\n  ],\n  \"MosfetSimpleCurrentMirror[3]\": [\n    \"m17\",\n    \"m18\"\n  ],\n  \"MosfetSimpleCurrentMirror[4]\": [\n    \"m11\",\n    \"m12\"\n  ],\n  \"MosfetSimpleCurrentMirror[5]\": [\n    \"m21\",\n    \"m22\"\n  ],\n  \"MosfetSimpleCurrentMirror[6]\": [\n    \"m23\",\n    \"m24\"\n  ],\n  \"MosfetSimpleCurrentMirror[7]\": [\n    \"m19\",\n    \"m20\"\n  ],\n  \"MosfetDifferentialPair[1]\": [\n    \"m16\",\n    \"m15\"\n  ]\n}",
+  "partitioning_info": "{\n    \"firstStage\": [], \n    \"secondStage\": [], \n    \"thirdStage\": [], \n    \"stageBias\": [],\n    \"loads\": []\n}\n  ",
+  "llm_generated": "[\n[\n\"same_column_above\",\n\"m3\",\n\"m4\"\n],\n[\n\"same_column_above\",\n\"m6\",\n\"m7\"\n],\n[\n\"same_column_above\",\n\"m23\",\n\"m21\"\n],\n[\n\"same_column_above\",\n\"m21\",\n\"m19\"\n],\n[\n\"same_column_above\",\n\"m19\",\n\"m17\"\n],\n[\n\"same_column_above\",\n\"m24\",\n\"m22\"\n],\n[\n\"same_column_above\",\n\"m22\",\n\"m20\"\n],\n[\n\"same_column_above\",\n\"m20\",\n\"m18\"\n],\n[\n\"same_row\",\n\"m23\",\n\"m24\"\n],\n[\n\"same_row\",\n\"m21\",\n\"m22\"\n],\n[\n\"same_row\",\n\"m19\",\n\"m20\"\n],\n[\n\"same_row\",\n\"m17\",\n\"m18\"\n],\n[\n\"left_of\",\n\"m23\",\n\"m24\"\n],\n[\n\"left_of\",\n\"m21\",\n\"m22\"\n],\n[\n\"left_of\",\n\"m19\",\n\"m20\"\n],\n[\n\"left_of\",\n\"m17\",\n\"m18\"\n],\n[\n\"same_column_above\",\n\"m11\",\n\"m8\"\n],\n[\n\"same_column_above\",\n\"m12\",\n\"m10\"\n],\n[\n\"same_row\",\n\"m11\",\n\"m12\"\n],\n[\n\"left_of\",\n\"m11\",\n\"m12\"\n],\n[\n\"same_row\",\n\"m8\",\n\"m10\"\n],\n[\n\"left_of\",\n\"m8\",\n\"m10\"\n],\n[\n\"same_column_above\",\n\"m28\",\n\"m26\"\n],\n[\n\"same_column_above\",\n\"m29\",\n\"m27\"\n],\n[\n\"same_row\",\n\"m28\",\n\"m29\"\n],\n[\n\"left_of\",\n\"m28\",\n\"m29\"\n],\n[\n\"left_of\",\n\"m2\",\n\"m15\"\n],\n[\n\"left_of\",\n\"m15\",\n\"m21\"\n],\n[\n\"left_of\",\n\"m16\",\n\"m22\"\n],\n[\n\"left_of\",\n\"m21\",\n\"m11\"\n],\n[\n\"left_of\",\n\"m22\",\n\"m12\"\n],\n[\n\"left_of\",\n\"m11\",\n\"m28\"\n],\n[\n\"left_of\",\n\"m12\",\n\"m29\"\n],\n[\n\"same_column_above\",\n\"m9\",\n\"m15\"\n],\n[\n\"same_column_above\",\n\"m26\",\n\"m25\"\n],\n[\n\"same_row\",\n\"m26\",\n\"m27\"\n],\n[\n\"left_of\",\n\"m26\",\n\"m27\"\n]\n]",
+  "user_defined": "[[\"same_row\", \"terminal_vrefcm\", \"m26\"], [\"column_proximity\", 3, \"terminal_vrefcm\", \"m26\"]]",
+  "orientation_constraints": "{}",
+  "path_based_constraints": [
+    "CONSTRAINT_1_SHARE_DRAIN_SOURCE_CONNECTION",
+    "CONSTRAINT_2_SORT_VDD_GND_TRACABILITY",
+    "CONSTRAINT_3_SHARE_GATE_TO_GATE_CONNECTION",
+    "CONSTRAINT_6_PLACE_VDD_DIFFERENT_COLUMN",
+    "CONSTRAINT_7_DONT_PLACE_TOO_CLOSE_TO_BOUNDARIES",
+    "CONSTRAINT_8_PLACE_CAPACITORS_MIDDLE",
+    "CONSTRAINT_9_PLACE_INPUT_PORTS_LEFT",
+    "CONSTRAINT_10_PLACE_OUTPUT_PORTS_RIGHT",
+    "CONSTRAINT_11_PLACE_BIASING_PORTS_LEFT",
+    "CONSTRAINT_12_PLACE_VDD_PORTS_TOP_RIGHT",
+    "CONSTRAINT_4_SHARE_SOURCE_TO_SOURCE_CONNECTION",
+    "CONSTRAINT_5_PLACE_SEPARATELY_2"
+  ],
+  "terminals": [
+    "inp",
+    "inn",
+    "outp",
+    "outm",
+    "vrefcm",
+    "vdd!",
+    "gnd!"
+  ]
+}

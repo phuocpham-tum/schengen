@@ -1,0 +1,101 @@
+<structure_recognition_results>
+		<structure name="CascodedPMOSAnalogInverter">
+			<structure name="CascodePair">
+				<structure name="Normal Transistor">
+					<devices>
+						<device name="m9" deviceType="Mosfet" techType="p" />
+					</devices>
+				</structure>
+				<structure name="Normal Transistor">
+					<devices>
+						<device name="m10" deviceType="Mosfet" techType="p" />
+					</devices>
+				</structure>
+			</structure>
+			<structure name="Normal Transistor">
+				<devices>
+					<device name="m8" deviceType="Mosfet" techType="n" />
+				</devices>
+			</structure>
+		</structure>
+		<structure name="DifferentialPair">
+			<structure name="Normal Transistor">
+				<devices>
+					<device name="m6" deviceType="Mosfet" techType="n" />
+				</devices>
+			</structure>
+			<structure name="Normal Transistor">
+				<devices>
+					<device name="m7" deviceType="Mosfet" techType="n" />
+				</devices>
+			</structure>
+		</structure>
+		<structure name="SimpleCurrentMirror">
+			<structure name="Diode">
+				<devices>
+					<device name="m2" deviceType="Mosfet" techType="p" />
+				</devices>
+			</structure>
+			<structure name="Normal Transistor">
+				<devices>
+					<device name="m4" deviceType="Mosfet" techType="p" />
+				</devices>
+			</structure>
+		</structure>
+		<structure name="SimpleCurrentMirror">
+			<structure name="Diode">
+				<devices>
+					<device name="m11" deviceType="Mosfet" techType="n" />
+				</devices>
+			</structure>
+			<structure name="Normal Transistor">
+				<devices>
+					<device name="m5" deviceType="Mosfet" techType="n" />
+				</devices>
+			</structure>
+		</structure>
+		<structure name="SimpleCurrentMirror">
+			<structure name="Diode">
+				<devices>
+					<device name="m11" deviceType="Mosfet" techType="n" />
+				</devices>
+			</structure>
+			<structure name="Normal Transistor">
+				<devices>
+					<device name="m8" deviceType="Mosfet" techType="n" />
+				</devices>
+			</structure>
+		</structure>
+		<structure name="SimpleCurrentMirror">
+			<structure name="Diode">
+				<devices>
+					<device name="m11" deviceType="Mosfet" techType="n" />
+				</devices>
+			</structure>
+			<structure name="Normal Transistor">
+				<devices>
+					<device name="m1" deviceType="Mosfet" techType="n" />
+				</devices>
+			</structure>
+		</structure>
+		<structure name="Capacitor">
+			<devices>
+				<device name="c2" deviceType="Capacitor" techType="undefined" />
+			</devices>
+		</structure>
+		<structure name="Capacitor">
+			<devices>
+				<device name="c1" deviceType="Capacitor" techType="undefined" />
+			</devices>
+		</structure>
+		<structure name="Diode">
+			<devices>
+				<device name="m12" deviceType="Mosfet" techType="p" />
+			</devices>
+		</structure>
+		<structure name="Normal Transistor">
+			<devices>
+				<device name="m3" deviceType="Mosfet" techType="p" />
+			</devices>
+		</structure>
+	</structure_recognition_results>

@@ -1,0 +1,28 @@
+{
+  "subcircuit_info": "{}",
+  "partitioning_info": "{\n    \"firstStage\": [], \n    \"secondStage\": [], \n    \"thirdStage\": [], \n    \"stageBias\": [],\n    \"loads\": []\n}\n  ",
+  "llm_generated": "[[\"left_of\", \"m1\", \"m2\"], [\"left_of\", \"m3\", \"m4\"], [\"below\", \"r1\", \"m1\"], [\"left_of\", \"m4\", \"m10\"], [\"left_of\", \"m12\", \"m11\"], [\"left_of\", \"m11\", \"m14\"], [\"left_of\", \"m5\", \"m1\"], [\"column_proximity\", 2, \"r1\", \"m1\"], [\"column_proximity\", 2, \"r1\", \"m2\"], [\"same_row\", \"m1\", \"m2\"], [\"same_row\", \"m3\", \"m4\"], [\"same_row\", \"m11\", \"m12\"], [\"same_row\", \"m5\", \"m6\"], [\"same_row\", \"m6\", \"m8\"], [\"same_column_above\", \"m3\", \"m1\"], [\"same_column_above\", \"m4\", \"m2\"], [\"same_column_above\", \"m10\", \"m12\"], [\"same_column_above\", \"m13\", \"m11\"], [\"same_column_above\", \"m15\", \"m14\"], [\"same_column_above\", \"m7\", \"m6\"], [\"same_column_above\", \"m9\", \"m8\"], [\"same_row\", \"terminal_in1\", \"m1\"], [\"left_of\", \"terminal_in1\", \"m1\"], [\"column_proximity\", 2, \"terminal_in1\", \"m1\"], [\"same_row\", \"terminal_in2\", \"m2\"], [\"right_of\", \"terminal_in2\", \"m2\"], [\"column_proximity\", 2, \"terminal_in2\", \"m2\"]]",
+  "user_defined": "[\n\n]\n                ",
+  "orientation_constraints": "{\"m1\": 1, \"m2\": 0}",
+  "path_based_constraints": [
+    "CONSTRAINT_1_SHARE_DRAIN_SOURCE_CONNECTION",
+    "CONSTRAINT_2_SORT_VDD_GND_TRACABILITY",
+    "CONSTRAINT_3_SHARE_GATE_TO_GATE_CONNECTION",
+    "CONSTRAINT_6_PLACE_VDD_DIFFERENT_COLUMN",
+    "CONSTRAINT_7_DONT_PLACE_TOO_CLOSE_TO_BOUNDARIES",
+    "CONSTRAINT_8_PLACE_CAPACITORS_MIDDLE",
+    "CONSTRAINT_10_PLACE_OUTPUT_PORTS_RIGHT",
+    "CONSTRAINT_11_PLACE_BIASING_PORTS_LEFT",
+    "CONSTRAINT_12_PLACE_VDD_PORTS_TOP_RIGHT",
+    "CONSTRAINT_4_SHARE_SOURCE_TO_SOURCE_CONNECTION",
+    "CONSTRAINT_5_PLACE_SEPARATELY_2"
+  ],
+  "terminals": [
+    "ibias",
+    "in1",
+    "in2",
+    "out",
+    "vdd!",
+    "gnd!"
+  ]
+}

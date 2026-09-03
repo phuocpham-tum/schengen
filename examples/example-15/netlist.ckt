@@ -1,0 +1,24 @@
+m1 net_loadout1 in1 net_tail net_tail pmos
+m2 net_loadout2 in2 net_tail net_tail pmos
+r1 net_loadout1 gnd!
+r2 net_loadout2 gnd!
+m3 net_bias7 net_bias7 vdd! vdd! pmos
+m4 net_tail net_bias7 vdd! vdd! pmos
+m5 ibias ibias gnd! gnd! nmos
+m6 net_bias5 ibias gnd! gnd! nmos
+m7 net_bias5 net_bias5 vdd! vdd! pmos
+m8 net_bias6 ibias gnd! gnd! nmos
+m9 net_bias6 net_bias6 vdd! vdd! pmos
+m10 net_bias7 ibias gnd! gnd! nmos
+m11 net_mid2_p net_loadout2 gnd! gnd! nmos
+m12 net_mid2_p net_bias5 vdd! vdd! pmos
+m13 outp net_mid2_p gnd! gnd! nmos
+m14 outp net_bias6 vdd! vdd! pmos
+c1 net_mid2_p outp
+c2 net_loadout2 net_mid2_p
+m15 net_mid2_n net_loadout1 gnd! gnd! nmos
+m16 net_mid2_n net_bias5 vdd! vdd! pmos
+m17 outn net_mid2_n gnd! gnd! nmos
+m18 outn net_bias6 vdd! vdd! pmos
+c3 net_mid2_n outn
+c4 net_loadout1 net_mid2_n

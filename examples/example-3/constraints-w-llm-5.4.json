@@ -1,0 +1,26 @@
+{
+  "subcircuit_info": "{\n\n}\n  ",
+  "partitioning_info": "{\n    \"firstStage\": [], \n    \"secondStage\": [], \n    \"thirdStage\": [], \n    \"stageBias\": [],\n    \"loads\": []\n}\n  ",
+  "llm_generated": "[\n[\"left_of\", \"Q8\", \"Q2\"],\n[\"left_of\", \"Q13\", \"Q11\"],\n[\"left_of\", \"Q27\", \"Q10\"],\n[\"left_of\", \"Q2\", \"Q14\"],\n[\"left_of\", \"Q10\", \"Q15\"],\n[\"left_of\", \"Q11\", \"Q15\"],\n[\"left_of\", \"Q14\", \"Q15\"],\n[\"left_of\", \"Q6\", \"R4\"],\n[\"left_of\", \"Q7\", \"R4\"],\n[\"above\", \"Q17\", \"Q6\"],\n[\"above\", \"Q17\", \"Q27\"],\n[\"above\", \"R1\", \"Q8\"],\n[\"above\", \"R1\", \"Q26\"],\n[\"above\", \"R2\", \"Q22\"],\n[\"above\", \"R8\", \"Q12\"],\n[\"above\", \"R9\", \"Q21\"],\n[\"below\", \"Q19\", \"Q16\"],\n[\"below\", \"Q23\", \"Q25\"],\n[\"below\", \"R3\", \"Q22\"],\n[\"below\", \"R7\", \"Q15\"],\n[\"cluster_proximity\", 6, \"Q17\", \"R14\", \"R17\", \"Q6\", \"Q27\"],\n[\"cluster_proximity\", 6, \"Q8\", \"Q26\", \"Q13\", \"R1\", \"Q27\"],\n[\"cluster_proximity\", 6, \"Q2\", \"Q4\", \"Q5\", \"R11\", \"R16\"],\n[\"cluster_proximity\", 6, \"Q10\", \"Q11\", \"Q20\", \"R5\", \"Q27\"],\n[\"cluster_proximity\", 6, \"Q3\", \"Q16\", \"Q22\", \"R2\", \"R3\"],\n[\"cluster_proximity\", 6, \"Q12\", \"Q18\", \"Q14\", \"R8\", \"R19\"],\n[\"cluster_proximity\", 6, \"Q18\", \"Q21\", \"R10\", \"R12\", \"R9\"],\n[\"cluster_proximity\", 6, \"Q9\", \"Q10\", \"Q14\", \"Q15\", \"R6\"],\n[\"cluster_proximity\", 6, \"Q14\", \"Q15\", \"Q25\", \"R15\", \"Q22\"],\n[\"cluster_proximity\", 6, \"Q16\", \"Q19\", \"Q24\", \"Q25\", \"R13\"],\n[\"cluster_proximity\", 4, \"Q23\", \"Q25\", \"R20\"],\n[\"cluster_proximity\", 4, \"Q6\", \"Q7\", \"R4\", \"Q15\"],\n[\"cluster_proximity\", 4, \"Q1\", \"Q3\", \"Q15\", \"R7\"],\n[\"cluster_proximity\", 4, \"Q21\", \"R18\", \"R19\"],\n[\"cluster_proximity\", 6, \"Q10\", \"Q20\", \"Q24\", \"R21\"],\n[\"row_proximity\", 1, \"R14\", \"Q6\"],\n[\"row_proximity\", 1, \"R14\", \"Q27\"],\n[\"row_proximity\", 1, \"Q5\", \"Q2\"],\n[\"row_proximity\", 1, \"Q5\", \"Q4\"],\n[\"row_proximity\", 1, \"Q10\", \"Q20\"],\n[\"row_proximity\", 1, \"Q12\", \"Q18\"],\n[\"row_proximity\", 1, \"Q12\", \"Q14\"],\n[\"row_proximity\", 1, \"Q9\", \"Q12\"],\n[\"row_proximity\", 1, \"Q16\", \"Q22\"],\n[\"row_proximity\", 1, \"Q3\", \"Q22\"],\n[\"row_proximity\", 1, \"Q14\", \"Q25\"],\n[\"row_proximity\", 1, \"Q22\", \"Q25\"],\n[\"row_proximity\", 1, \"R4\", \"Q15\"],\n[\"column_proximity\", 2, \"Q1\", \"Q15\"],\n[\"column_proximity\", 2, \"Q3\", \"Q15\"],\n[\"column_proximity\", 2, \"Q24\", \"Q25\"],\n[\"column_proximity\", 2, \"Q10\", \"Q11\"],\n[\"same_row\", \"Q6\", \"Q27\"],\n[\"same_row\", \"Q8\", \"Q26\"],\n[\"same_row\", \"Q2\", \"Q4\"],\n[\"same_row\", \"Q18\", \"Q21\"],\n[\"same_row\", \"R10\", \"R12\"],\n[\"same_row\", \"Q24\", \"Q25\"],\n[\"same_row\", \"Q14\", \"Q15\"],\n[\"same_row\", \"Q1\", \"Q3\"],\n[\"same_column_above\", \"Q17\", \"R14\"],\n[\"same_column_above\", \"R2\", \"Q22\"],\n[\"same_column_below\", \"R3\", \"Q22\"],\n[\"same_column_above\", \"R8\", \"Q12\"],\n[\"same_column_above\", \"R9\", \"Q21\"],\n[\"same_column_below\", \"R7\", \"Q15\"],\n[\"same_column_below\", \"R20\", \"Q25\"],\n[\"same_column_above\", \"R20\", \"Q23\"]\n]\n                ",
+  "user_defined": "[\n[\"above_all\", 1, \"terminal_+15V\"],\n[\"below_all\", 1, \"terminal_-15V\"],\n[\"middle_all\", \"terminal_GND\"]\n]\n                ",
+  "orientation_constraints": "{\n\n}\n                ",
+  "path_based_constraints": [
+    "CONSTRAINT_1_SHARE_DRAIN_SOURCE_CONNECTION",
+    "CONSTRAINT_3_SHARE_GATE_TO_GATE_CONNECTION",
+    "CONSTRAINT_6_PLACE_VDD_DIFFERENT_COLUMN",
+    "CONSTRAINT_7_DONT_PLACE_TOO_CLOSE_TO_BOUNDARIES",
+    "CONSTRAINT_8_PLACE_CAPACITORS_MIDDLE",
+    "CONSTRAINT_9_PLACE_INPUT_PORTS_LEFT",
+    "CONSTRAINT_10_PLACE_OUTPUT_PORTS_RIGHT",
+    "CONSTRAINT_11_PLACE_BIASING_PORTS_LEFT",
+    "CONSTRAINT_12_PLACE_VDD_PORTS_TOP_RIGHT",
+    "CONSTRAINT_5_PLACE_SEPARATELY_3"
+  ],
+  "terminals": [
+    "net_output_0",
+    "net_input_0",
+    "+15V",
+    "-15V",
+    "GND"
+  ]
+}

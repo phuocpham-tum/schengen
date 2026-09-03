@@ -1,0 +1,588 @@
+[role]
+You are a senior **analog IC designer and schematic automation expert** with deep expertise in circuit topology, functional block recognition, and human-readable schematic conventions.
+
+[task]
+Given a SPICE netlist and recognized functional building blocks, generate a **placement constraint list** that guides a constraint programming solver to place components on a grid-based schematic canvas in a human-readable and structurally meaningful way.
+
+[context]
+The schematic is synthesized from:
+
+- A SPICE netlist describing all circuit components and connectivity
+- Recognized functional building blocks (e.g., differential pairs, current mirrors, active loads)
+- An optional higher-level partitioning of the circuit into stages (e.g., input stage, gain stage, biasing network)
+
+The goal is to generate constraints that:
+
+- Visually expose circuit structure and hierarchy
+- Align matched and symmetric devices
+- Reflect signal flow (typically left-to-right) and bias flow (typically top-to-bottom)
+- Make the schematic easy for analog designers to interpret
+
+Available inputs:
+
+- Constraint primitives: Constraint primitives (ordered from least to most strict):
+
+1. `right_of(A, B)` — Place A in a column to the right of B.
+2. `left_of(A, B)` — Place A in a column to the left of B.
+3. `above(A, B)` — Place A in a row above B.
+4. `below(A, B)` — Place A in a row below B.
+5. `row_proximity(D, A, B)` — Keep A and B within D rows of each other.
+6. `column_proximity(D, A, B)` — Keep A and B within D columns of each other.
+7. `close_row(A, B, D)` — Keep A within D rows of B.
+8. `cluster_proximity(D, A, B, ...)` — Keep all listed components within D rows and columns of each other.
+9. `above_all(S, A)` — Place A above every other component, with spacing S.
+10. `below_all(S, A)` — Place A below every other component, with spacing S.
+11. `middle_all(A)` — Place A in the middle row, all other components above or below it.
+12. `same_row(A, B)` — Align A and B on the same row.
+13. `same_column(A, B)` — Align A and B in the same column.
+14. `same_column_above(A, B)` — Align A and B in the same column, with A above B.
+15. `same_column_below(A, B)` — Align A and B in the same column, with A below B.
+16. `between_columns(T, A, B, ...)` — Place T in a column between the listed components.
+17. `between_rows(T, A, B, ...)` — Place T in a row between the listed components.
+18. `clear_row_between(A, B)` — Keep the rows between A and B (when column-aligned) clear of other components.
+19. `clear_column_between(A, B)` — Keep the columns between A and B (when row-aligned) clear of other components.
+20. `t_junction(T, A, B)` — Place T between row-aligned A and B, forming a T-junction.
+- SPICE netlist: m1 net1 net1 vdd! vdd pmos
+m2 net2 net1 vdd! vdd pmos
+m3 ibias ibias gnd! gnd! nmos
+m4 net1 ibias gnd! gnd! nmos
+m5 net4 ibias gnd! gnd! nmos
+m6 net5 in1 net4 gnd! nmos
+m7 net6 in2 net4 gnd! nmos
+m8 net5 net5 vdd! vdd! pmos
+m9 net6 net6 vdd! vdd! pmos
+m10 out1 net5 vdd! vdd! pmos
+m11 out2 net6 vdd! vdd! pmos
+m12 out1 net2 net7 gnd! nmos
+m13 out2 net2 net8 gnd! nmos
+m14 net7 net9 gnd! gnd! nmos
+m15 net8 net9 gnd! gnd! nmos
+m16 net9 net9 gnd! gnd! nmos
+m17 net9 net1 vdd! vdd! pmos
+m18 net10 net1 vdd! vdd! pmos
+m19 net13 net1 vdd! vdd! pmos
+m20 net11 out2 net10 vdd! pmos
+m21 net9 vcm net10 vdd! pmos
+m22 net9 vcm net13 vdd! pmos
+m23 net11 out1 net13 vdd! pmos
+m24 net9 net11 gnd! gnd! nmos
+m25 net11 net11 gnd! gnd! nmos
+m26 net2 net2 gnd! gnd! nmos
+- Building block recognition result: {
+  "MosfetCascodedNMOSAnalogInverter[1]": [
+    "m10",
+    "m12",
+    "m14"
+  ],
+  "MosfetCascodedNMOSAnalogInverter[2]": [
+    "m11",
+    "m13",
+    "m15"
+  ],
+  "MosfetPmosNonInvertingInverter[1]": [
+    "m1",
+    "m4"
+  ],
+  "MosfetAnalogInverter[1]": [
+    "m17",
+    "m24"
+  ],
+  "MosfetDifferentialPair[1]": [
+    "m20",
+    "m21"
+  ],
+  "MosfetDifferentialPair[2]": [
+    "m23",
+    "m22"
+  ],
+  "MosfetDifferentialPair[3]": [
+    "m6",
+    "m7"
+  ],
+  "MosfetNmosDiodeAnalogInverter[1]": [
+    "m2",
+    "m26"
+  ],
+  "MosfetNmosDiodeAnalogInverter[2]": [
+    "m17",
+    "m16"
+  ],
+  "MosfetSimpleCurrentMirror[1]": [
+    "m3",
+    "m4",
+    "m5"
+  ],
+  "MosfetSimpleCurrentMirror[2]": [
+    "m1",
+    "m17",
+    "m19",
+    "m2"
+  ],
+  "MosfetSimpleCurrentMirror[3]": [
+    "m25",
+    "m24"
+  ],
+  "MosfetSimpleCurrentMirror[4]": [
+    "m8",
+    "m10"
+  ],
+  "MosfetSimpleCurrentMirror[5]": [
+    "m9",
+    "m11"
+  ],
+  "MosfetSimpleCurrentMirror[6]": [
+    "m16",
+    "m14",
+    "m15"
+  ]
+}
+- Optional partitioning result: {
+  "firstStage": [
+    "m6",
+    "m7"
+  ],
+  "secondStage": [
+    "m10",
+    "m11"
+  ],
+  "thirdStage": [],
+  "stageBias": [
+    "m18",
+    "m19",
+    "m5",
+    "m1",
+    "m12",
+    "m14",
+    "m13",
+    "m15",
+    "m3",
+    "m4",
+    "m2",
+    "m26"
+  ],
+  "loads": [
+    "m17",
+    "m25",
+    "m16",
+    "m24",
+    "m8",
+    "m9"
+  ]
+} (may be empty or omitted)
+
+[constraints]
+
+- Use **only** constraint primitives defined in Constraint primitives (ordered from least to most strict):
+
+1. `right_of(A, B)` — Place A in a column to the right of B.
+2. `left_of(A, B)` — Place A in a column to the left of B.
+3. `above(A, B)` — Place A in a row above B.
+4. `below(A, B)` — Place A in a row below B.
+5. `row_proximity(D, A, B)` — Keep A and B within D rows of each other.
+6. `column_proximity(D, A, B)` — Keep A and B within D columns of each other.
+7. `close_row(A, B, D)` — Keep A within D rows of B.
+8. `cluster_proximity(D, A, B, ...)` — Keep all listed components within D rows and columns of each other.
+9. `above_all(S, A)` — Place A above every other component, with spacing S.
+10. `below_all(S, A)` — Place A below every other component, with spacing S.
+11. `middle_all(A)` — Place A in the middle row, all other components above or below it.
+12. `same_row(A, B)` — Align A and B on the same row.
+13. `same_column(A, B)` — Align A and B in the same column.
+14. `same_column_above(A, B)` — Align A and B in the same column, with A above B.
+15. `same_column_below(A, B)` — Align A and B in the same column, with A below B.
+16. `between_columns(T, A, B, ...)` — Place T in a column between the listed components.
+17. `between_rows(T, A, B, ...)` — Place T in a row between the listed components.
+18. `clear_row_between(A, B)` — Keep the rows between A and B (when column-aligned) clear of other components.
+19. `clear_column_between(A, B)` — Keep the columns between A and B (when row-aligned) clear of other components.
+20. `t_junction(T, A, B)` — Place T between row-aligned A and B, forming a T-junction.
+- Output **only** the final constraint list; do not include explanations or reasoning
+- Component names must match **exactly** those defined in m1 net1 net1 vdd! vdd pmos
+m2 net2 net1 vdd! vdd pmos
+m3 ibias ibias gnd! gnd! nmos
+m4 net1 ibias gnd! gnd! nmos
+m5 net4 ibias gnd! gnd! nmos
+m6 net5 in1 net4 gnd! nmos
+m7 net6 in2 net4 gnd! nmos
+m8 net5 net5 vdd! vdd! pmos
+m9 net6 net6 vdd! vdd! pmos
+m10 out1 net5 vdd! vdd! pmos
+m11 out2 net6 vdd! vdd! pmos
+m12 out1 net2 net7 gnd! nmos
+m13 out2 net2 net8 gnd! nmos
+m14 net7 net9 gnd! gnd! nmos
+m15 net8 net9 gnd! gnd! nmos
+m16 net9 net9 gnd! gnd! nmos
+m17 net9 net1 vdd! vdd! pmos
+m18 net10 net1 vdd! vdd! pmos
+m19 net13 net1 vdd! vdd! pmos
+m20 net11 out2 net10 vdd! pmos
+m21 net9 vcm net10 vdd! pmos
+m22 net9 vcm net13 vdd! pmos
+m23 net11 out1 net13 vdd! pmos
+m24 net9 net11 gnd! gnd! nmos
+m25 net11 net11 gnd! gnd! nmos
+m26 net2 net2 gnd! gnd! nmos (case-sensitive)
+- Do not introduce new components or rename existing ones
+- Avoid redundant, conflicting, or unsatisfiable constraints
+- If {
+  "firstStage": [
+    "m6",
+    "m7"
+  ],
+  "secondStage": [
+    "m10",
+    "m11"
+  ],
+  "thirdStage": [],
+  "stageBias": [
+    "m18",
+    "m19",
+    "m5",
+    "m1",
+    "m12",
+    "m14",
+    "m13",
+    "m15",
+    "m3",
+    "m4",
+    "m2",
+    "m26"
+  ],
+  "loads": [
+    "m17",
+    "m25",
+    "m16",
+    "m24",
+    "m8",
+    "m9"
+  ]
+} is provided, use it to spatially separate major circuit stages; otherwise, rely only on building block structure
+
+
+[constraint_strategy]
+Generate constraints following an iterative strictness strategy:
+
+1. The constraint primitives in Constraint primitives (ordered from least to most strict):
+
+1. `right_of(A, B)` — Place A in a column to the right of B.
+2. `left_of(A, B)` — Place A in a column to the left of B.
+3. `above(A, B)` — Place A in a row above B.
+4. `below(A, B)` — Place A in a row below B.
+5. `row_proximity(D, A, B)` — Keep A and B within D rows of each other.
+6. `column_proximity(D, A, B)` — Keep A and B within D columns of each other.
+7. `close_row(A, B, D)` — Keep A within D rows of B.
+8. `cluster_proximity(D, A, B, ...)` — Keep all listed components within D rows and columns of each other.
+9. `above_all(S, A)` — Place A above every other component, with spacing S.
+10. `below_all(S, A)` — Place A below every other component, with spacing S.
+11. `middle_all(A)` — Place A in the middle row, all other components above or below it.
+12. `same_row(A, B)` — Align A and B on the same row.
+13. `same_column(A, B)` — Align A and B in the same column.
+14. `same_column_above(A, B)` — Align A and B in the same column, with A above B.
+15. `same_column_below(A, B)` — Align A and B in the same column, with A below B.
+16. `between_columns(T, A, B, ...)` — Place T in a column between the listed components.
+17. `between_rows(T, A, B, ...)` — Place T in a row between the listed components.
+18. `clear_row_between(A, B)` — Keep the rows between A and B (when column-aligned) clear of other components.
+19. `clear_column_between(A, B)` — Keep the columns between A and B (when row-aligned) clear of other components.
+20. `t_junction(T, A, B)` — Place T between row-aligned A and B, forming a T-junction. are ordered by strictness:
+- The first primitive has the lowest strictness
+- The last primitive has the highest strictness
+- Strictness increases monotonically along the list
+
+2. When generating constraints:
+- Prefer using lower-strictness primitives first
+- Introduce higher-strictness primitives progressively only when needed to refine placement
+- Ensure that the final constraint list reflects a progression from less strict → more strict
+
+3. Design workflow principle:
+- Begin with relaxed constraints to allow flexible placement
+- Gradually add stricter constraints to refine alignment, symmetry, and structure
+- Avoid over-constraining early
+
+4. Consistency requirements:
+- Do not introduce a high-strictness constraint if a lower-strictness one already sufficiently captures the relationship
+- Ensure stricter constraints do not contradict earlier ones
+- Maintain logical compatibility across all constraints
+
+Definition of strictness:
+- A constraint is less strict if it allows many feasible placements.
+- A constraint is more strict if it tightly restricts component positions or alignment.
+- In the available constraint primitive list, the first constraint has the lowest strictness and the strictness increases guadually to the higest strictness of the last one.
+
+Example:
+`right_of(M2, M1)` is less strict than `same_row(M2, M1)`, because the latter forces exact horizontal alignment and reduces the solution space more significantly.
+
+When generating the constraint list:
+
+- Include both relaxed and strict constraints when appropriate
+- Ensure that stricter constraints do not contradict earlier relaxed ones
+- Order constraints so that relaxed constraints appear earlier in the list and stricter ones later
+
+[style]
+- Deterministic and engineering-oriented
+- No natural language explanations
+- No intermediate reasoning in the output
+
+[deliverables]
+Produce a single variable assignment:
+
+constraints = [
+["<constraint-name>", <value-if-exist>, "<target-component>", "<reference1>", "<reference2>", ...],
+...
+]
+
+[format]
+Return exactly one Python-style list assignment with no surrounding commentary.
+
+## Output Format
+constraints = [
+    ["<constraint-name>", <value-if-exist>, "<target-component>", "<reference1>", "<reference2>"],
+    ["<constraint-name>", "<target-component>", "<reference1>", "<reference2>"]
+]
+
+Template rules:
+
+1. General template:
+    ["<constraint-name>", <value-if-exist>, "<target-component>", "<reference1>", "<reference2>"]
+
+2. For primitives that require a value:
+    ["row_proximity", 2, "M1", "M2"]
+3. For primitives that do not require a value, omit the value field entirely:
+    ["same_row", "M1", "M2"]
+- Component names must be strings
+- <value-if-exist> may be a number or string depending on the primitive definition
+- Each constraint must contain at least one reference component
+
+[examples]
+Example output:
+
+constraints = [
+    ["same_row", "M1", "M2"],
+    ["right_of", "M5", "M4"],
+    ["row_proximity", 2, "M3", "M6"]
+]
+
+
+[evaluation]
+Before producing the final output, internally verify:
+
+- All component names appear in m1 net1 net1 vdd! vdd pmos
+m2 net2 net1 vdd! vdd pmos
+m3 ibias ibias gnd! gnd! nmos
+m4 net1 ibias gnd! gnd! nmos
+m5 net4 ibias gnd! gnd! nmos
+m6 net5 in1 net4 gnd! nmos
+m7 net6 in2 net4 gnd! nmos
+m8 net5 net5 vdd! vdd! pmos
+m9 net6 net6 vdd! vdd! pmos
+m10 out1 net5 vdd! vdd! pmos
+m11 out2 net6 vdd! vdd! pmos
+m12 out1 net2 net7 gnd! nmos
+m13 out2 net2 net8 gnd! nmos
+m14 net7 net9 gnd! gnd! nmos
+m15 net8 net9 gnd! gnd! nmos
+m16 net9 net9 gnd! gnd! nmos
+m17 net9 net1 vdd! vdd! pmos
+m18 net10 net1 vdd! vdd! pmos
+m19 net13 net1 vdd! vdd! pmos
+m20 net11 out2 net10 vdd! pmos
+m21 net9 vcm net10 vdd! pmos
+m22 net9 vcm net13 vdd! pmos
+m23 net11 out1 net13 vdd! pmos
+m24 net9 net11 gnd! gnd! nmos
+m25 net11 net11 gnd! gnd! nmos
+m26 net2 net2 gnd! gnd! nmos
+- All primitives used exist in Constraint primitives (ordered from least to most strict):
+
+1. `right_of(A, B)` — Place A in a column to the right of B.
+2. `left_of(A, B)` — Place A in a column to the left of B.
+3. `above(A, B)` — Place A in a row above B.
+4. `below(A, B)` — Place A in a row below B.
+5. `row_proximity(D, A, B)` — Keep A and B within D rows of each other.
+6. `column_proximity(D, A, B)` — Keep A and B within D columns of each other.
+7. `close_row(A, B, D)` — Keep A within D rows of B.
+8. `cluster_proximity(D, A, B, ...)` — Keep all listed components within D rows and columns of each other.
+9. `above_all(S, A)` — Place A above every other component, with spacing S.
+10. `below_all(S, A)` — Place A below every other component, with spacing S.
+11. `middle_all(A)` — Place A in the middle row, all other components above or below it.
+12. `same_row(A, B)` — Align A and B on the same row.
+13. `same_column(A, B)` — Align A and B in the same column.
+14. `same_column_above(A, B)` — Align A and B in the same column, with A above B.
+15. `same_column_below(A, B)` — Align A and B in the same column, with A below B.
+16. `between_columns(T, A, B, ...)` — Place T in a column between the listed components.
+17. `between_rows(T, A, B, ...)` — Place T in a row between the listed components.
+18. `clear_row_between(A, B)` — Keep the rows between A and B (when column-aligned) clear of other components.
+19. `clear_column_between(A, B)` — Keep the columns between A and B (when row-aligned) clear of other components.
+20. `t_junction(T, A, B)` — Place T between row-aligned A and B, forming a T-junction.
+- Constraints do not contradict each other (e.g., both left_of and right_of for the same pair)
+- Devices belonging to the same building block are spatially grouped
+- If partitioning is provided, stages are visually separated
+
+If any verification fails, revise the constraint list before output.
+
+Self-check rubric:
+
+- ✔ Correct Python syntax
+- ✔ Only allowed primitives used
+- ✔ No missing or misspelled components
+- ✔ No extra text outside the list assignment
+
+[failures_to_avoid]
+
+- Do not output explanations, reasoning, or comments
+- Do not include a placeholder value such as null or "ignore" when the primitive does not require a value
+- Do not output JSON or any format other than the specified Python-style list
+- Do not generate constraints referencing non-existent components
+- Do not assume that partitioning information is always present
+
+
+Constraint primitives (ordered from least to most strict):
+
+1. `right_of(A, B)` — Place A in a column to the right of B.
+2. `left_of(A, B)` — Place A in a column to the left of B.
+3. `above(A, B)` — Place A in a row above B.
+4. `below(A, B)` — Place A in a row below B.
+5. `row_proximity(D, A, B)` — Keep A and B within D rows of each other.
+6. `column_proximity(D, A, B)` — Keep A and B within D columns of each other.
+7. `close_row(A, B, D)` — Keep A within D rows of B.
+8. `cluster_proximity(D, A, B, ...)` — Keep all listed components within D rows and columns of each other.
+9. `above_all(S, A)` — Place A above every other component, with spacing S.
+10. `below_all(S, A)` — Place A below every other component, with spacing S.
+11. `middle_all(A)` — Place A in the middle row, all other components above or below it.
+12. `same_row(A, B)` — Align A and B on the same row.
+13. `same_column(A, B)` — Align A and B in the same column.
+14. `same_column_above(A, B)` — Align A and B in the same column, with A above B.
+15. `same_column_below(A, B)` — Align A and B in the same column, with A below B.
+16. `between_columns(T, A, B, ...)` — Place T in a column between the listed components.
+17. `between_rows(T, A, B, ...)` — Place T in a row between the listed components.
+18. `clear_row_between(A, B)` — Keep the rows between A and B (when column-aligned) clear of other components.
+19. `clear_column_between(A, B)` — Keep the columns between A and B (when row-aligned) clear of other components.
+20. `t_junction(T, A, B)` — Place T between row-aligned A and B, forming a T-junction.
+
+m1 net1 net1 vdd! vdd pmos
+m2 net2 net1 vdd! vdd pmos
+m3 ibias ibias gnd! gnd! nmos
+m4 net1 ibias gnd! gnd! nmos
+m5 net4 ibias gnd! gnd! nmos
+m6 net5 in1 net4 gnd! nmos
+m7 net6 in2 net4 gnd! nmos
+m8 net5 net5 vdd! vdd! pmos
+m9 net6 net6 vdd! vdd! pmos
+m10 out1 net5 vdd! vdd! pmos
+m11 out2 net6 vdd! vdd! pmos
+m12 out1 net2 net7 gnd! nmos
+m13 out2 net2 net8 gnd! nmos
+m14 net7 net9 gnd! gnd! nmos
+m15 net8 net9 gnd! gnd! nmos
+m16 net9 net9 gnd! gnd! nmos
+m17 net9 net1 vdd! vdd! pmos
+m18 net10 net1 vdd! vdd! pmos
+m19 net13 net1 vdd! vdd! pmos
+m20 net11 out2 net10 vdd! pmos
+m21 net9 vcm net10 vdd! pmos
+m22 net9 vcm net13 vdd! pmos
+m23 net11 out1 net13 vdd! pmos
+m24 net9 net11 gnd! gnd! nmos
+m25 net11 net11 gnd! gnd! nmos
+m26 net2 net2 gnd! gnd! nmos
+
+{
+  "MosfetCascodedNMOSAnalogInverter[1]": [
+    "m10",
+    "m12",
+    "m14"
+  ],
+  "MosfetCascodedNMOSAnalogInverter[2]": [
+    "m11",
+    "m13",
+    "m15"
+  ],
+  "MosfetPmosNonInvertingInverter[1]": [
+    "m1",
+    "m4"
+  ],
+  "MosfetAnalogInverter[1]": [
+    "m17",
+    "m24"
+  ],
+  "MosfetDifferentialPair[1]": [
+    "m20",
+    "m21"
+  ],
+  "MosfetDifferentialPair[2]": [
+    "m23",
+    "m22"
+  ],
+  "MosfetDifferentialPair[3]": [
+    "m6",
+    "m7"
+  ],
+  "MosfetNmosDiodeAnalogInverter[1]": [
+    "m2",
+    "m26"
+  ],
+  "MosfetNmosDiodeAnalogInverter[2]": [
+    "m17",
+    "m16"
+  ],
+  "MosfetSimpleCurrentMirror[1]": [
+    "m3",
+    "m4",
+    "m5"
+  ],
+  "MosfetSimpleCurrentMirror[2]": [
+    "m1",
+    "m17",
+    "m19",
+    "m2"
+  ],
+  "MosfetSimpleCurrentMirror[3]": [
+    "m25",
+    "m24"
+  ],
+  "MosfetSimpleCurrentMirror[4]": [
+    "m8",
+    "m10"
+  ],
+  "MosfetSimpleCurrentMirror[5]": [
+    "m9",
+    "m11"
+  ],
+  "MosfetSimpleCurrentMirror[6]": [
+    "m16",
+    "m14",
+    "m15"
+  ]
+}
+
+{
+  "firstStage": [
+    "m6",
+    "m7"
+  ],
+  "secondStage": [
+    "m10",
+    "m11"
+  ],
+  "thirdStage": [],
+  "stageBias": [
+    "m18",
+    "m19",
+    "m5",
+    "m1",
+    "m12",
+    "m14",
+    "m13",
+    "m15",
+    "m3",
+    "m4",
+    "m2",
+    "m26"
+  ],
+  "loads": [
+    "m17",
+    "m25",
+    "m16",
+    "m24",
+    "m8",
+    "m9"
+  ]
+}

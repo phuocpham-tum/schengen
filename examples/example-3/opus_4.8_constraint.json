@@ -1,0 +1,26 @@
+{
+    "subcircuit_info": "{\n\n}\n  ",
+    "partitioning_info": "{\n    \"firstStage\": [], \n    \"secondStage\": [], \n    \"thirdStage\": [], \n    \"stageBias\": [],\n    \"loads\": []\n}\n  ",
+    "llm_generated": "[[\"right_of\", \"Q8\", \"Q1\"], [\"right_of\", \"Q17\", \"Q8\"], [\"right_of\", \"Q18\", \"Q17\"], [\"right_of\", \"Q15\", \"Q18\"], [\"right_of\", \"Q22\", \"Q15\"], [\"right_of\", \"Q11\", \"Q22\"], [\"right_of\", \"Q13\", \"Q11\"], [\"right_of\", \"Q7\", \"Q13\"], [\"right_of\", \"Q3\", \"Q7\"], [\"above\", \"R6\", \"R1\"], [\"above\", \"R6\", \"R3\"], [\"row_proximity\", 2, \"Q18\", \"Q19\"], [\"row_proximity\", 2, \"Q19\", \"Q15\"], [\"row_proximity\", 2, \"Q5\", \"Q24\"], [\"column_proximity\", 2, \"Q4\", \"Q2\"], [\"cluster_proximity\", 3, \"Q1\", \"Q6\", \"Q25\", \"R4\"], [\"cluster_proximity\", 2, \"Q8\", \"Q9\", \"R14\"], [\"cluster_proximity\", 3, \"Q13\", \"Q14\", \"Q2\"], [\"cluster_proximity\", 3, \"Q17\", \"Q20\", \"Q21\"], [\"cluster_proximity\", 3, \"Q22\", \"Q23\", \"Q24\"], [\"cluster_proximity\", 3, \"Q11\", \"Q12\", \"Q5\"], [\"same_row\", \"Q8\", \"Q9\"], [\"same_row\", \"Q13\", \"Q14\"], [\"same_row\", \"Q20\", \"Q21\"], [\"same_row\", \"Q1\", \"Q6\"], [\"same_column_above\", \"Q3\", \"Q4\"], [\"same_column_above\", \"Q15\", \"Q16\"], [\"same_column_above\", \"Q7\", \"Q10\"]]",
+    "user_defined": "[\n[\"above_all\", 1, \"terminal_+15V\"],\n[\"below_all\", 1, \"terminal_-15V\"],\n[\"middle_all\", \"terminal_GND\"]\n]\n                ",
+    "orientation_constraints": "{\n\n}\n                ",
+    "path_based_constraints": [
+        "CONSTRAINT_1_SHARE_DRAIN_SOURCE_CONNECTION",
+        "CONSTRAINT_3_SHARE_GATE_TO_GATE_CONNECTION",
+        "CONSTRAINT_6_PLACE_VDD_DIFFERENT_COLUMN",
+        "CONSTRAINT_7_DONT_PLACE_TOO_CLOSE_TO_BOUNDARIES",
+        "CONSTRAINT_8_PLACE_CAPACITORS_MIDDLE",
+        "CONSTRAINT_9_PLACE_INPUT_PORTS_LEFT",
+        "CONSTRAINT_10_PLACE_OUTPUT_PORTS_RIGHT",
+        "CONSTRAINT_11_PLACE_BIASING_PORTS_LEFT",
+        "CONSTRAINT_12_PLACE_VDD_PORTS_TOP_RIGHT",
+        "CONSTRAINT_5_PLACE_SEPARATELY_3"
+    ],
+    "terminals": [
+        "net_output_0",
+        "net_input_0",
+        "+15V",
+        "-15V",
+        "GND"
+    ]
+}

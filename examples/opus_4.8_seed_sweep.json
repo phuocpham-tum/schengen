@@ -1,0 +1,2168 @@
+{
+  "1": {
+    "with": [
+      {
+        "seed": 1,
+        "routing_cost": 18715,
+        "bends": 25,
+        "crossings": 24,
+        "hpwl": 176
+      },
+      {
+        "seed": 3,
+        "routing_cost": 18923,
+        "bends": 25,
+        "crossings": 25,
+        "hpwl": 176
+      },
+      {
+        "seed": 4,
+        "routing_cost": 18923,
+        "bends": 25,
+        "crossings": 25,
+        "hpwl": 176
+      },
+      {
+        "seed": 6,
+        "routing_cost": 19385,
+        "bends": 26,
+        "crossings": 25,
+        "hpwl": 176
+      },
+      {
+        "seed": 2,
+        "routing_cost": 21588,
+        "bends": 27,
+        "crossings": 22,
+        "hpwl": 176
+      },
+      {
+        "seed": 5,
+        "routing_cost": 19385,
+        "bends": 26,
+        "crossings": 25,
+        "hpwl": 176
+      },
+      {
+        "seed": 8,
+        "routing_cost": 18608,
+        "bends": 25,
+        "crossings": 24,
+        "hpwl": 176
+      },
+      {
+        "seed": 7,
+        "routing_cost": 18815,
+        "bends": 25,
+        "crossings": 25,
+        "hpwl": 176
+      },
+      {
+        "seed": 10,
+        "routing_cost": 20918,
+        "bends": 26,
+        "crossings": 21,
+        "hpwl": 176
+      },
+      {
+        "seed": 9,
+        "routing_cost": 20918,
+        "bends": 26,
+        "crossings": 21,
+        "hpwl": 176
+      }
+    ],
+    "without": [
+      {
+        "seed": 2,
+        "routing_cost": 32333,
+        "bends": 40,
+        "crossings": 25,
+        "hpwl": 206
+      },
+      {
+        "seed": 4,
+        "routing_cost": 32323,
+        "bends": 40,
+        "crossings": 25,
+        "hpwl": 206
+      },
+      {
+        "seed": 1,
+        "routing_cost": 29457,
+        "bends": 34,
+        "crossings": 23,
+        "hpwl": 203
+      },
+      {
+        "seed": 5,
+        "routing_cost": 30318,
+        "bends": 40,
+        "crossings": 27,
+        "hpwl": 203
+      },
+      {
+        "seed": 3,
+        "routing_cost": 31481,
+        "bends": 33,
+        "crossings": 30,
+        "hpwl": 203
+      },
+      {
+        "seed": 6,
+        "routing_cost": 31481,
+        "bends": 33,
+        "crossings": 30,
+        "hpwl": 203
+      },
+      {
+        "seed": 7,
+        "routing_cost": 32148,
+        "bends": 38,
+        "crossings": 29,
+        "hpwl": 206
+      },
+      {
+        "seed": 8,
+        "routing_cost": 30318,
+        "bends": 40,
+        "crossings": 27,
+        "hpwl": 203
+      },
+      {
+        "seed": 10,
+        "routing_cost": 32333,
+        "bends": 40,
+        "crossings": 25,
+        "hpwl": 206
+      },
+      {
+        "seed": 9,
+        "routing_cost": 31441,
+        "bends": 37,
+        "crossings": 27,
+        "hpwl": 203
+      }
+    ]
+  },
+  "2": {
+    "with": [
+      {
+        "seed": 1,
+        "routing_cost": 10035,
+        "bends": 11,
+        "crossings": 13,
+        "hpwl": 163
+      },
+      {
+        "seed": 2,
+        "routing_cost": 10035,
+        "bends": 11,
+        "crossings": 13,
+        "hpwl": 163
+      },
+      {
+        "seed": 3,
+        "routing_cost": 9534,
+        "bends": 10,
+        "crossings": 13,
+        "hpwl": 163
+      },
+      {
+        "seed": 4,
+        "routing_cost": 9035,
+        "bends": 9,
+        "crossings": 13,
+        "hpwl": 163
+      },
+      {
+        "seed": 7,
+        "routing_cost": 10545,
+        "bends": 12,
+        "crossings": 13,
+        "hpwl": 163
+      },
+      {
+        "seed": 6,
+        "routing_cost": 10034,
+        "bends": 11,
+        "crossings": 13,
+        "hpwl": 163
+      },
+      {
+        "seed": 5,
+        "routing_cost": 9035,
+        "bends": 9,
+        "crossings": 13,
+        "hpwl": 163
+      },
+      {
+        "seed": 8,
+        "routing_cost": 9035,
+        "bends": 9,
+        "crossings": 13,
+        "hpwl": 163
+      },
+      {
+        "seed": 9,
+        "routing_cost": 10534,
+        "bends": 12,
+        "crossings": 13,
+        "hpwl": 163
+      },
+      {
+        "seed": 10,
+        "routing_cost": 9035,
+        "bends": 9,
+        "crossings": 13,
+        "hpwl": 163
+      }
+    ],
+    "without": [
+      {
+        "seed": 1,
+        "routing_cost": 14437,
+        "bends": 19,
+        "crossings": 15,
+        "hpwl": 160
+      },
+      {
+        "seed": 2,
+        "routing_cost": 15198,
+        "bends": 20,
+        "crossings": 16,
+        "hpwl": 155
+      },
+      {
+        "seed": 3,
+        "routing_cost": 9683,
+        "bends": 13,
+        "crossings": 8,
+        "hpwl": 153
+      },
+      {
+        "seed": 4,
+        "routing_cost": 11531,
+        "bends": 15,
+        "crossings": 12,
+        "hpwl": 158
+      },
+      {
+        "seed": 6,
+        "routing_cost": 12460,
+        "bends": 16,
+        "crossings": 13,
+        "hpwl": 156
+      },
+      {
+        "seed": 5,
+        "routing_cost": 11157,
+        "bends": 14,
+        "crossings": 12,
+        "hpwl": 152
+      },
+      {
+        "seed": 7,
+        "routing_cost": 12771,
+        "bends": 15,
+        "crossings": 16,
+        "hpwl": 160
+      },
+      {
+        "seed": 8,
+        "routing_cost": 10425,
+        "bends": 13,
+        "crossings": 11,
+        "hpwl": 152
+      },
+      {
+        "seed": 10,
+        "routing_cost": 11193,
+        "bends": 16,
+        "crossings": 8,
+        "hpwl": 153
+      },
+      {
+        "seed": 9,
+        "routing_cost": 18917,
+        "bends": 26,
+        "crossings": 19,
+        "hpwl": 156
+      }
+    ]
+  },
+  "3": {
+    "with": [
+      {
+        "seed": 2,
+        "routing_cost": 92034,
+        "bends": 237,
+        "crossings": 191,
+        "hpwl": 537
+      },
+      {
+        "seed": 1,
+        "routing_cost": 99675,
+        "bends": 251,
+        "crossings": 223,
+        "hpwl": 621
+      },
+      {
+        "seed": 3,
+        "routing_cost": 98696,
+        "bends": 223,
+        "crossings": 191,
+        "hpwl": 565
+      },
+      {
+        "seed": 4,
+        "routing_cost": 88265,
+        "bends": 199,
+        "crossings": 182,
+        "hpwl": 569
+      },
+      {
+        "seed": 6,
+        "routing_cost": 96473,
+        "bends": 187,
+        "crossings": 176,
+        "hpwl": 579
+      },
+      {
+        "seed": 5,
+        "routing_cost": 92406,
+        "bends": 287,
+        "crossings": 215,
+        "hpwl": 564
+      },
+      {
+        "seed": 8,
+        "routing_cost": 104412,
+        "bends": 227,
+        "crossings": 227,
+        "hpwl": 643
+      },
+      {
+        "seed": 7,
+        "routing_cost": 99318,
+        "bends": 222,
+        "crossings": 202,
+        "hpwl": 576
+      },
+      {
+        "seed": 10,
+        "routing_cost": 100208,
+        "bends": 233,
+        "crossings": 210,
+        "hpwl": 600
+      },
+      {
+        "seed": 9,
+        "routing_cost": 121449,
+        "bends": 256,
+        "crossings": 266,
+        "hpwl": 615
+      }
+    ],
+    "without": [
+      {
+        "seed": 3,
+        "routing_cost": 88666,
+        "bends": 245,
+        "crossings": 187,
+        "hpwl": 654
+      },
+      {
+        "seed": 2,
+        "routing_cost": 133856,
+        "bends": 270,
+        "crossings": 277,
+        "hpwl": 706
+      },
+      {
+        "seed": 1,
+        "routing_cost": 109592,
+        "bends": 319,
+        "crossings": 245,
+        "hpwl": 671
+      },
+      {
+        "seed": 4,
+        "routing_cost": 97126,
+        "bends": 177,
+        "crossings": 205,
+        "hpwl": 651
+      },
+      {
+        "seed": 6,
+        "routing_cost": 113526,
+        "bends": 226,
+        "crossings": 236,
+        "hpwl": 722
+      },
+      {
+        "seed": 7,
+        "routing_cost": 103464,
+        "bends": 311,
+        "crossings": 212,
+        "hpwl": 615
+      },
+      {
+        "seed": 8,
+        "routing_cost": 109495,
+        "bends": 210,
+        "crossings": 250,
+        "hpwl": 712
+      },
+      {
+        "seed": 5,
+        "routing_cost": 137976,
+        "bends": 281,
+        "crossings": 302,
+        "hpwl": 715
+      },
+      {
+        "seed": 9,
+        "routing_cost": 115608,
+        "bends": 228,
+        "crossings": 254,
+        "hpwl": 698
+      },
+      {
+        "seed": 10,
+        "routing_cost": 108446,
+        "bends": 276,
+        "crossings": 255,
+        "hpwl": 649
+      }
+    ]
+  },
+  "4": {
+    "with": [
+      {
+        "seed": 1,
+        "routing_cost": 8981,
+        "bends": 10,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 2,
+        "routing_cost": 3885,
+        "bends": 11,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 3,
+        "routing_cost": 9001,
+        "bends": 10,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 4,
+        "routing_cost": 3885,
+        "bends": 11,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 5,
+        "routing_cost": 8981,
+        "bends": 10,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 6,
+        "routing_cost": 3885,
+        "bends": 11,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 8,
+        "routing_cost": 3885,
+        "bends": 11,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 7,
+        "routing_cost": 9001,
+        "bends": 10,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 9,
+        "routing_cost": 8981,
+        "bends": 10,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 10,
+        "routing_cost": 8981,
+        "bends": 10,
+        "crossings": 6,
+        "hpwl": 101
+      }
+    ],
+    "without": [
+      {
+        "seed": 1,
+        "routing_cost": 3885,
+        "bends": 11,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 2,
+        "routing_cost": 3885,
+        "bends": 11,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 3,
+        "routing_cost": 3885,
+        "bends": 11,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 5,
+        "routing_cost": 3885,
+        "bends": 11,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 4,
+        "routing_cost": 3885,
+        "bends": 11,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 7,
+        "routing_cost": 9001,
+        "bends": 10,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 6,
+        "routing_cost": 9001,
+        "bends": 10,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 9,
+        "routing_cost": 8981,
+        "bends": 10,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 8,
+        "routing_cost": 3885,
+        "bends": 11,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 10,
+        "routing_cost": 3885,
+        "bends": 11,
+        "crossings": 6,
+        "hpwl": 101
+      }
+    ]
+  },
+  "5": {
+    "with": [
+      {
+        "seed": 1,
+        "routing_cost": 2685,
+        "bends": 11,
+        "crossings": 3,
+        "hpwl": 76
+      },
+      {
+        "seed": 2,
+        "routing_cost": 2685,
+        "bends": 11,
+        "crossings": 3,
+        "hpwl": 76
+      },
+      {
+        "seed": 3,
+        "routing_cost": 2685,
+        "bends": 11,
+        "crossings": 3,
+        "hpwl": 76
+      },
+      {
+        "seed": 4,
+        "routing_cost": 2685,
+        "bends": 11,
+        "crossings": 3,
+        "hpwl": 76
+      },
+      {
+        "seed": 5,
+        "routing_cost": 2685,
+        "bends": 11,
+        "crossings": 3,
+        "hpwl": 76
+      },
+      {
+        "seed": 7,
+        "routing_cost": 2685,
+        "bends": 11,
+        "crossings": 3,
+        "hpwl": 76
+      },
+      {
+        "seed": 6,
+        "routing_cost": 2685,
+        "bends": 11,
+        "crossings": 3,
+        "hpwl": 76
+      },
+      {
+        "seed": 8,
+        "routing_cost": 2685,
+        "bends": 11,
+        "crossings": 3,
+        "hpwl": 76
+      },
+      {
+        "seed": 9,
+        "routing_cost": 2685,
+        "bends": 11,
+        "crossings": 3,
+        "hpwl": 76
+      },
+      {
+        "seed": 10,
+        "routing_cost": 2685,
+        "bends": 11,
+        "crossings": 3,
+        "hpwl": 76
+      }
+    ],
+    "without": [
+      {
+        "seed": 4,
+        "routing_cost": 3225,
+        "bends": 6,
+        "crossings": 4,
+        "hpwl": 69
+      },
+      {
+        "seed": 1,
+        "routing_cost": 3226,
+        "bends": 6,
+        "crossings": 4,
+        "hpwl": 69
+      },
+      {
+        "seed": 3,
+        "routing_cost": 3226,
+        "bends": 6,
+        "crossings": 4,
+        "hpwl": 69
+      },
+      {
+        "seed": 2,
+        "routing_cost": 3226,
+        "bends": 6,
+        "crossings": 4,
+        "hpwl": 69
+      },
+      {
+        "seed": 5,
+        "routing_cost": 3225,
+        "bends": 6,
+        "crossings": 4,
+        "hpwl": 69
+      },
+      {
+        "seed": 6,
+        "routing_cost": 3225,
+        "bends": 6,
+        "crossings": 4,
+        "hpwl": 69
+      },
+      {
+        "seed": 7,
+        "routing_cost": 3225,
+        "bends": 6,
+        "crossings": 4,
+        "hpwl": 69
+      },
+      {
+        "seed": 8,
+        "routing_cost": 3226,
+        "bends": 6,
+        "crossings": 4,
+        "hpwl": 69
+      },
+      {
+        "seed": 9,
+        "routing_cost": 3225,
+        "bends": 6,
+        "crossings": 4,
+        "hpwl": 69
+      },
+      {
+        "seed": 10,
+        "routing_cost": 3225,
+        "bends": 6,
+        "crossings": 4,
+        "hpwl": 69
+      }
+    ]
+  },
+  "6": {
+    "with": [
+      {
+        "seed": 2,
+        "routing_cost": 31805,
+        "bends": 59,
+        "crossings": 26,
+        "hpwl": 256
+      },
+      {
+        "seed": 3,
+        "routing_cost": 37262,
+        "bends": 64,
+        "crossings": 40,
+        "hpwl": 256
+      },
+      {
+        "seed": 5,
+        "routing_cost": 34629,
+        "bends": 59,
+        "crossings": 37,
+        "hpwl": 256
+      },
+      {
+        "seed": 4,
+        "routing_cost": 39505,
+        "bends": 71,
+        "crossings": 48,
+        "hpwl": 256
+      },
+      {
+        "seed": 1,
+        "routing_cost": 39228,
+        "bends": 88,
+        "crossings": 52,
+        "hpwl": 219
+      },
+      {
+        "seed": 8,
+        "routing_cost": 34872,
+        "bends": 69,
+        "crossings": 33,
+        "hpwl": 256
+      },
+      {
+        "seed": 6,
+        "routing_cost": 37519,
+        "bends": 59,
+        "crossings": 38,
+        "hpwl": 256
+      },
+      {
+        "seed": 7,
+        "routing_cost": 37447,
+        "bends": 56,
+        "crossings": 47,
+        "hpwl": 256
+      },
+      {
+        "seed": 9,
+        "routing_cost": 37509,
+        "bends": 55,
+        "crossings": 52,
+        "hpwl": 256
+      },
+      {
+        "seed": 10,
+        "routing_cost": 34478,
+        "bends": 61,
+        "crossings": 34,
+        "hpwl": 256
+      }
+    ],
+    "without": [
+      {
+        "seed": 3,
+        "routing_cost": 40050,
+        "bends": 89,
+        "crossings": 69,
+        "hpwl": 284
+      },
+      {
+        "seed": 5,
+        "routing_cost": 43653,
+        "bends": 75,
+        "crossings": 48,
+        "hpwl": 313
+      },
+      {
+        "seed": 2,
+        "routing_cost": 49577,
+        "bends": 82,
+        "crossings": 70,
+        "hpwl": 353
+      },
+      {
+        "seed": 4,
+        "routing_cost": 50682,
+        "bends": 83,
+        "crossings": 72,
+        "hpwl": 363
+      },
+      {
+        "seed": 1,
+        "routing_cost": 65368,
+        "bends": 94,
+        "crossings": 112,
+        "hpwl": 329
+      },
+      {
+        "seed": 7,
+        "routing_cost": 47471,
+        "bends": 93,
+        "crossings": 74,
+        "hpwl": 367
+      },
+      {
+        "seed": 9,
+        "routing_cost": 41309,
+        "bends": 81,
+        "crossings": 58,
+        "hpwl": 336
+      },
+      {
+        "seed": 6,
+        "routing_cost": 55526,
+        "bends": 102,
+        "crossings": 64,
+        "hpwl": 315
+      },
+      {
+        "seed": 8
+      },
+      {
+        "seed": 10,
+        "routing_cost": 46757,
+        "bends": 92,
+        "crossings": 66,
+        "hpwl": 306
+      }
+    ]
+  },
+  "7": {
+    "with": [
+      {
+        "seed": 1,
+        "routing_cost": 6368,
+        "bends": 12,
+        "crossings": 1,
+        "hpwl": 81
+      },
+      {
+        "seed": 2,
+        "routing_cost": 6911,
+        "bends": 12,
+        "crossings": 2,
+        "hpwl": 81
+      },
+      {
+        "seed": 4,
+        "routing_cost": 9002,
+        "bends": 15,
+        "crossings": 4,
+        "hpwl": 81
+      },
+      {
+        "seed": 5,
+        "routing_cost": 5814,
+        "bends": 11,
+        "crossings": 0,
+        "hpwl": 81
+      },
+      {
+        "seed": 3,
+        "routing_cost": 13464,
+        "bends": 19,
+        "crossings": 7,
+        "hpwl": 80
+      },
+      {
+        "seed": 7,
+        "routing_cost": 7112,
+        "bends": 13,
+        "crossings": 2,
+        "hpwl": 81
+      },
+      {
+        "seed": 6,
+        "routing_cost": 7703,
+        "bends": 13,
+        "crossings": 2,
+        "hpwl": 81
+      },
+      {
+        "seed": 9,
+        "routing_cost": 8266,
+        "bends": 16,
+        "crossings": 1,
+        "hpwl": 81
+      },
+      {
+        "seed": 8,
+        "routing_cost": 16711,
+        "bends": 23,
+        "crossings": 3,
+        "hpwl": 83
+      },
+      {
+        "seed": 10,
+        "routing_cost": 14906,
+        "bends": 21,
+        "crossings": 17,
+        "hpwl": 85
+      }
+    ],
+    "without": [
+      {
+        "seed": 1,
+        "routing_cost": 23295,
+        "bends": 39,
+        "crossings": 9,
+        "hpwl": 93
+      },
+      {
+        "seed": 2,
+        "routing_cost": 14770,
+        "bends": 23,
+        "crossings": 6,
+        "hpwl": 108
+      },
+      {
+        "seed": 3,
+        "routing_cost": 19129,
+        "bends": 34,
+        "crossings": 6,
+        "hpwl": 96
+      },
+      {
+        "seed": 4,
+        "routing_cost": 13636,
+        "bends": 25,
+        "crossings": 4,
+        "hpwl": 91
+      },
+      {
+        "seed": 5,
+        "routing_cost": 20440,
+        "bends": 31,
+        "crossings": 5,
+        "hpwl": 102
+      },
+      {
+        "seed": 6,
+        "routing_cost": 19457,
+        "bends": 31,
+        "crossings": 6,
+        "hpwl": 85
+      },
+      {
+        "seed": 7,
+        "routing_cost": 17591,
+        "bends": 22,
+        "crossings": 11,
+        "hpwl": 90
+      },
+      {
+        "seed": 8,
+        "routing_cost": 17508,
+        "bends": 22,
+        "crossings": 12,
+        "hpwl": 103
+      },
+      {
+        "seed": 9,
+        "routing_cost": 26028,
+        "bends": 30,
+        "crossings": 21,
+        "hpwl": 99
+      },
+      {
+        "seed": 10,
+        "routing_cost": 17002,
+        "bends": 36,
+        "crossings": 7,
+        "hpwl": 101
+      }
+    ]
+  },
+  "8": {
+    "with": [
+      {
+        "seed": 2,
+        "routing_cost": 11980,
+        "bends": 28,
+        "crossings": 12,
+        "hpwl": 89
+      },
+      {
+        "seed": 1,
+        "routing_cost": 13650,
+        "bends": 32,
+        "crossings": 12,
+        "hpwl": 89
+      },
+      {
+        "seed": 3,
+        "routing_cost": 12618,
+        "bends": 29,
+        "crossings": 12,
+        "hpwl": 89
+      },
+      {
+        "seed": 4,
+        "routing_cost": 11871,
+        "bends": 28,
+        "crossings": 11,
+        "hpwl": 89
+      },
+      {
+        "seed": 5,
+        "routing_cost": 13133,
+        "bends": 29,
+        "crossings": 13,
+        "hpwl": 89
+      },
+      {
+        "seed": 6,
+        "routing_cost": 12250,
+        "bends": 28,
+        "crossings": 12,
+        "hpwl": 89
+      },
+      {
+        "seed": 7,
+        "routing_cost": 12948,
+        "bends": 29,
+        "crossings": 13,
+        "hpwl": 89
+      },
+      {
+        "seed": 8,
+        "routing_cost": 12150,
+        "bends": 28,
+        "crossings": 12,
+        "hpwl": 89
+      },
+      {
+        "seed": 9,
+        "routing_cost": 12423,
+        "bends": 31,
+        "crossings": 9,
+        "hpwl": 89
+      },
+      {
+        "seed": 10,
+        "routing_cost": 11444,
+        "bends": 27,
+        "crossings": 10,
+        "hpwl": 89
+      }
+    ],
+    "without": [
+      {
+        "seed": 1,
+        "routing_cost": 19261,
+        "bends": 31,
+        "crossings": 13,
+        "hpwl": 84
+      },
+      {
+        "seed": 2,
+        "routing_cost": 9712,
+        "bends": 18,
+        "crossings": 6,
+        "hpwl": 78
+      },
+      {
+        "seed": 3,
+        "routing_cost": 10760,
+        "bends": 21,
+        "crossings": 8,
+        "hpwl": 88
+      },
+      {
+        "seed": 4,
+        "routing_cost": 15546,
+        "bends": 47,
+        "crossings": 8,
+        "hpwl": 80
+      },
+      {
+        "seed": 5,
+        "routing_cost": 19749,
+        "bends": 30,
+        "crossings": 18,
+        "hpwl": 98
+      },
+      {
+        "seed": 6,
+        "routing_cost": 21487,
+        "bends": 25,
+        "crossings": 14,
+        "hpwl": 76
+      },
+      {
+        "seed": 7,
+        "routing_cost": 12350,
+        "bends": 40,
+        "crossings": 8,
+        "hpwl": 74
+      },
+      {
+        "seed": 8,
+        "routing_cost": 19806,
+        "bends": 28,
+        "crossings": 12,
+        "hpwl": 88
+      },
+      {
+        "seed": 9,
+        "routing_cost": 8371,
+        "bends": 15,
+        "crossings": 6,
+        "hpwl": 76
+      },
+      {
+        "seed": 10,
+        "routing_cost": 19176,
+        "bends": 43,
+        "crossings": 12,
+        "hpwl": 83
+      }
+    ]
+  },
+  "9": {
+    "with": [
+      {
+        "seed": 4,
+        "routing_cost": 17636,
+        "bends": 25,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 5,
+        "routing_cost": 18351,
+        "bends": 25,
+        "crossings": 9,
+        "hpwl": 101
+      },
+      {
+        "seed": 2,
+        "routing_cost": 17414,
+        "bends": 24,
+        "crossings": 7,
+        "hpwl": 101
+      },
+      {
+        "seed": 3,
+        "routing_cost": 18542,
+        "bends": 26,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 1,
+        "routing_cost": 17016,
+        "bends": 24,
+        "crossings": 6,
+        "hpwl": 101
+      },
+      {
+        "seed": 6,
+        "routing_cost": 17226,
+        "bends": 24,
+        "crossings": 7,
+        "hpwl": 101
+      },
+      {
+        "seed": 7,
+        "routing_cost": 20735,
+        "bends": 29,
+        "crossings": 9,
+        "hpwl": 101
+      },
+      {
+        "seed": 8,
+        "routing_cost": 19805,
+        "bends": 33,
+        "crossings": 7,
+        "hpwl": 101
+      },
+      {
+        "seed": 9,
+        "routing_cost": 18632,
+        "bends": 26,
+        "crossings": 7,
+        "hpwl": 101
+      },
+      {
+        "seed": 10,
+        "routing_cost": 17994,
+        "bends": 25,
+        "crossings": 8,
+        "hpwl": 101
+      }
+    ],
+    "without": [
+      {
+        "seed": 1,
+        "routing_cost": 26525,
+        "bends": 31,
+        "crossings": 33,
+        "hpwl": 164
+      },
+      {
+        "seed": 3,
+        "routing_cost": 26264,
+        "bends": 37,
+        "crossings": 14,
+        "hpwl": 129
+      },
+      {
+        "seed": 2,
+        "routing_cost": 31238,
+        "bends": 37,
+        "crossings": 29,
+        "hpwl": 112
+      },
+      {
+        "seed": 4,
+        "routing_cost": 43007,
+        "bends": 43,
+        "crossings": 17,
+        "hpwl": 184
+      },
+      {
+        "seed": 6,
+        "routing_cost": 13604,
+        "bends": 30,
+        "crossings": 11,
+        "hpwl": 99
+      },
+      {
+        "seed": 7,
+        "routing_cost": 20381,
+        "bends": 35,
+        "crossings": 12,
+        "hpwl": 139
+      },
+      {
+        "seed": 8,
+        "routing_cost": 19581,
+        "bends": 41,
+        "crossings": 22,
+        "hpwl": 116
+      },
+      {
+        "seed": 9,
+        "routing_cost": 25441,
+        "bends": 28,
+        "crossings": 13,
+        "hpwl": 134
+      },
+      {
+        "seed": 5,
+        "routing_cost": 27581,
+        "bends": 40,
+        "crossings": 15,
+        "hpwl": 117
+      },
+      {
+        "seed": 10,
+        "routing_cost": 30893,
+        "bends": 42,
+        "crossings": 21,
+        "hpwl": 169
+      }
+    ]
+  },
+  "10": {
+    "with": [
+      {
+        "seed": 1,
+        "routing_cost": 50255,
+        "bends": 70,
+        "crossings": 57,
+        "hpwl": 321
+      },
+      {
+        "seed": 3,
+        "routing_cost": 45826,
+        "bends": 86,
+        "crossings": 71,
+        "hpwl": 316
+      },
+      {
+        "seed": 4,
+        "routing_cost": 47853,
+        "bends": 89,
+        "crossings": 91,
+        "hpwl": 309
+      },
+      {
+        "seed": 2,
+        "routing_cost": 55399,
+        "bends": 70,
+        "crossings": 78,
+        "hpwl": 322
+      },
+      {
+        "seed": 5,
+        "routing_cost": 46615,
+        "bends": 72,
+        "crossings": 56,
+        "hpwl": 331
+      },
+      {
+        "seed": 6,
+        "routing_cost": 53316,
+        "bends": 73,
+        "crossings": 55,
+        "hpwl": 346
+      },
+      {
+        "seed": 8,
+        "routing_cost": 45148,
+        "bends": 62,
+        "crossings": 52,
+        "hpwl": 350
+      },
+      {
+        "seed": 7,
+        "routing_cost": 52333,
+        "bends": 75,
+        "crossings": 64,
+        "hpwl": 324
+      },
+      {
+        "seed": 10,
+        "routing_cost": 53399,
+        "bends": 87,
+        "crossings": 93,
+        "hpwl": 309
+      },
+      {
+        "seed": 9,
+        "routing_cost": 50359,
+        "bends": 96,
+        "crossings": 88,
+        "hpwl": 411
+      }
+    ],
+    "without": [
+      {
+        "seed": 1,
+        "routing_cost": 81872,
+        "bends": 108,
+        "crossings": 149,
+        "hpwl": 514
+      },
+      {
+        "seed": 3,
+        "routing_cost": 85711,
+        "bends": 131,
+        "crossings": 84,
+        "hpwl": 462
+      },
+      {
+        "seed": 4
+      },
+      {
+        "seed": 2,
+        "routing_cost": 69368,
+        "bends": 90,
+        "crossings": 125,
+        "hpwl": 625
+      },
+      {
+        "seed": 6
+      },
+      {
+        "seed": 9,
+        "routing_cost": 75472,
+        "bends": 102,
+        "crossings": 114,
+        "hpwl": 452
+      },
+      {
+        "seed": 8
+      },
+      {
+        "seed": 7,
+        "routing_cost": 95055,
+        "bends": 106,
+        "crossings": 115,
+        "hpwl": 481
+      },
+      {
+        "seed": 5,
+        "routing_cost": 110251,
+        "bends": 113,
+        "crossings": 147,
+        "hpwl": 530
+      },
+      {
+        "seed": 10
+      }
+    ]
+  },
+  "11": {
+    "with": [
+      {
+        "seed": 1,
+        "routing_cost": 20191,
+        "bends": 25,
+        "crossings": 14,
+        "hpwl": 121
+      },
+      {
+        "seed": 5,
+        "routing_cost": 19842,
+        "bends": 24,
+        "crossings": 14,
+        "hpwl": 121
+      },
+      {
+        "seed": 3,
+        "routing_cost": 18205,
+        "bends": 22,
+        "crossings": 12,
+        "hpwl": 121
+      },
+      {
+        "seed": 2,
+        "routing_cost": 24564,
+        "bends": 32,
+        "crossings": 16,
+        "hpwl": 127
+      },
+      {
+        "seed": 4,
+        "routing_cost": 22278,
+        "bends": 29,
+        "crossings": 14,
+        "hpwl": 125
+      },
+      {
+        "seed": 6,
+        "routing_cost": 18927,
+        "bends": 23,
+        "crossings": 13,
+        "hpwl": 121
+      },
+      {
+        "seed": 7,
+        "routing_cost": 21953,
+        "bends": 27,
+        "crossings": 16,
+        "hpwl": 130
+      },
+      {
+        "seed": 8,
+        "routing_cost": 18016,
+        "bends": 22,
+        "crossings": 12,
+        "hpwl": 121
+      },
+      {
+        "seed": 10,
+        "routing_cost": 19336,
+        "bends": 22,
+        "crossings": 12,
+        "hpwl": 121
+      },
+      {
+        "seed": 9,
+        "routing_cost": 23591,
+        "bends": 33,
+        "crossings": 12,
+        "hpwl": 126
+      }
+    ],
+    "without": [
+      {
+        "seed": 1,
+        "routing_cost": 28791,
+        "bends": 43,
+        "crossings": 34,
+        "hpwl": 172
+      },
+      {
+        "seed": 2,
+        "routing_cost": 39660,
+        "bends": 50,
+        "crossings": 35,
+        "hpwl": 178
+      },
+      {
+        "seed": 3,
+        "routing_cost": 33228,
+        "bends": 43,
+        "crossings": 22,
+        "hpwl": 202
+      },
+      {
+        "seed": 4,
+        "routing_cost": 25303,
+        "bends": 40,
+        "crossings": 14,
+        "hpwl": 172
+      },
+      {
+        "seed": 5,
+        "routing_cost": 30051,
+        "bends": 46,
+        "crossings": 21,
+        "hpwl": 208
+      },
+      {
+        "seed": 6,
+        "routing_cost": 22044,
+        "bends": 35,
+        "crossings": 25,
+        "hpwl": 189
+      },
+      {
+        "seed": 8,
+        "routing_cost": 29837,
+        "bends": 36,
+        "crossings": 35,
+        "hpwl": 219
+      },
+      {
+        "seed": 9,
+        "routing_cost": 34064,
+        "bends": 52,
+        "crossings": 30,
+        "hpwl": 151
+      },
+      {
+        "seed": 7,
+        "routing_cost": 29085,
+        "bends": 38,
+        "crossings": 29,
+        "hpwl": 191
+      },
+      {
+        "seed": 10,
+        "routing_cost": 28366,
+        "bends": 33,
+        "crossings": 23,
+        "hpwl": 194
+      }
+    ]
+  },
+  "12": {
+    "with": [
+      {
+        "seed": 1,
+        "routing_cost": 11111,
+        "bends": 19,
+        "crossings": 9,
+        "hpwl": 145
+      },
+      {
+        "seed": 2,
+        "routing_cost": 11111,
+        "bends": 19,
+        "crossings": 9,
+        "hpwl": 145
+      },
+      {
+        "seed": 3,
+        "routing_cost": 11111,
+        "bends": 19,
+        "crossings": 9,
+        "hpwl": 145
+      },
+      {
+        "seed": 4,
+        "routing_cost": 11615,
+        "bends": 15,
+        "crossings": 10,
+        "hpwl": 145
+      },
+      {
+        "seed": 5,
+        "routing_cost": 11111,
+        "bends": 19,
+        "crossings": 9,
+        "hpwl": 145
+      },
+      {
+        "seed": 6,
+        "routing_cost": 12618,
+        "bends": 17,
+        "crossings": 10,
+        "hpwl": 145
+      },
+      {
+        "seed": 7,
+        "routing_cost": 11111,
+        "bends": 19,
+        "crossings": 9,
+        "hpwl": 145
+      },
+      {
+        "seed": 8,
+        "routing_cost": 11111,
+        "bends": 19,
+        "crossings": 9,
+        "hpwl": 145
+      },
+      {
+        "seed": 10,
+        "routing_cost": 11111,
+        "bends": 19,
+        "crossings": 9,
+        "hpwl": 145
+      },
+      {
+        "seed": 9,
+        "routing_cost": 11615,
+        "bends": 15,
+        "crossings": 10,
+        "hpwl": 145
+      }
+    ],
+    "without": [
+      {
+        "seed": 3,
+        "routing_cost": 23420,
+        "bends": 34,
+        "crossings": 15,
+        "hpwl": 151
+      },
+      {
+        "seed": 1,
+        "routing_cost": 25718,
+        "bends": 33,
+        "crossings": 25,
+        "hpwl": 167
+      },
+      {
+        "seed": 4,
+        "routing_cost": 27952,
+        "bends": 38,
+        "crossings": 19,
+        "hpwl": 144
+      },
+      {
+        "seed": 5,
+        "routing_cost": 21188,
+        "bends": 36,
+        "crossings": 18,
+        "hpwl": 169
+      },
+      {
+        "seed": 2,
+        "routing_cost": 31556,
+        "bends": 46,
+        "crossings": 37,
+        "hpwl": 251
+      },
+      {
+        "seed": 6,
+        "routing_cost": 31600,
+        "bends": 47,
+        "crossings": 32,
+        "hpwl": 225
+      },
+      {
+        "seed": 7,
+        "routing_cost": 28462,
+        "bends": 29,
+        "crossings": 42,
+        "hpwl": 201
+      },
+      {
+        "seed": 9,
+        "routing_cost": 35955,
+        "bends": 45,
+        "crossings": 38,
+        "hpwl": 311
+      },
+      {
+        "seed": 8,
+        "routing_cost": 21458,
+        "bends": 30,
+        "crossings": 14,
+        "hpwl": 170
+      },
+      {
+        "seed": 10,
+        "routing_cost": 38497,
+        "bends": 47,
+        "crossings": 31,
+        "hpwl": 227
+      }
+    ]
+  },
+  "13": {
+    "with": [
+      {
+        "seed": 2,
+        "routing_cost": 6133,
+        "bends": 14,
+        "crossings": 4,
+        "hpwl": 94
+      },
+      {
+        "seed": 1,
+        "routing_cost": 5526,
+        "bends": 13,
+        "crossings": 6,
+        "hpwl": 94
+      },
+      {
+        "seed": 3,
+        "routing_cost": 6133,
+        "bends": 14,
+        "crossings": 4,
+        "hpwl": 94
+      },
+      {
+        "seed": 4,
+        "routing_cost": 5526,
+        "bends": 13,
+        "crossings": 6,
+        "hpwl": 94
+      },
+      {
+        "seed": 6,
+        "routing_cost": 6133,
+        "bends": 14,
+        "crossings": 4,
+        "hpwl": 94
+      },
+      {
+        "seed": 5,
+        "routing_cost": 6133,
+        "bends": 14,
+        "crossings": 4,
+        "hpwl": 94
+      },
+      {
+        "seed": 7,
+        "routing_cost": 6133,
+        "bends": 14,
+        "crossings": 4,
+        "hpwl": 94
+      },
+      {
+        "seed": 8,
+        "routing_cost": 6133,
+        "bends": 14,
+        "crossings": 4,
+        "hpwl": 94
+      },
+      {
+        "seed": 9,
+        "routing_cost": 6133,
+        "bends": 14,
+        "crossings": 4,
+        "hpwl": 94
+      },
+      {
+        "seed": 10,
+        "routing_cost": 6133,
+        "bends": 14,
+        "crossings": 4,
+        "hpwl": 94
+      }
+    ],
+    "without": [
+      {
+        "seed": 3,
+        "routing_cost": 23299,
+        "bends": 23,
+        "crossings": 8,
+        "hpwl": 93
+      },
+      {
+        "seed": 5,
+        "routing_cost": 8741,
+        "bends": 16,
+        "crossings": 8,
+        "hpwl": 88
+      },
+      {
+        "seed": 1,
+        "routing_cost": 9933,
+        "bends": 19,
+        "crossings": 8,
+        "hpwl": 90
+      },
+      {
+        "seed": 6,
+        "routing_cost": 8655,
+        "bends": 15,
+        "crossings": 12,
+        "hpwl": 90
+      },
+      {
+        "seed": 4,
+        "routing_cost": 11840,
+        "bends": 24,
+        "crossings": 5,
+        "hpwl": 92
+      },
+      {
+        "seed": 2,
+        "routing_cost": 16120,
+        "bends": 25,
+        "crossings": 13,
+        "hpwl": 99
+      },
+      {
+        "seed": 7,
+        "routing_cost": 17882,
+        "bends": 22,
+        "crossings": 9,
+        "hpwl": 93
+      },
+      {
+        "seed": 8,
+        "routing_cost": 23529,
+        "bends": 25,
+        "crossings": 20,
+        "hpwl": 116
+      },
+      {
+        "seed": 9,
+        "routing_cost": 7305,
+        "bends": 18,
+        "crossings": 8,
+        "hpwl": 84
+      },
+      {
+        "seed": 10,
+        "routing_cost": 7994,
+        "bends": 12,
+        "crossings": 12,
+        "hpwl": 90
+      }
+    ]
+  },
+  "14": {
+    "with": [
+      {
+        "seed": 1,
+        "routing_cost": 29947,
+        "bends": 40,
+        "crossings": 28,
+        "hpwl": 253
+      },
+      {
+        "seed": 2,
+        "routing_cost": 22948,
+        "bends": 40,
+        "crossings": 38,
+        "hpwl": 244
+      },
+      {
+        "seed": 3,
+        "routing_cost": 28167,
+        "bends": 48,
+        "crossings": 44,
+        "hpwl": 291
+      },
+      {
+        "seed": 6,
+        "routing_cost": 31847,
+        "bends": 40,
+        "crossings": 44,
+        "hpwl": 272
+      },
+      {
+        "seed": 4,
+        "routing_cost": 31432,
+        "bends": 48,
+        "crossings": 34,
+        "hpwl": 247
+      },
+      {
+        "seed": 5,
+        "routing_cost": 31220,
+        "bends": 47,
+        "crossings": 39,
+        "hpwl": 247
+      },
+      {
+        "seed": 8,
+        "routing_cost": 20325,
+        "bends": 38,
+        "crossings": 32,
+        "hpwl": 260
+      },
+      {
+        "seed": 7,
+        "routing_cost": 26533,
+        "bends": 52,
+        "crossings": 35,
+        "hpwl": 247
+      },
+      {
+        "seed": 9,
+        "routing_cost": 25061,
+        "bends": 39,
+        "crossings": 37,
+        "hpwl": 248
+      },
+      {
+        "seed": 10,
+        "routing_cost": 31364,
+        "bends": 56,
+        "crossings": 61,
+        "hpwl": 260
+      }
+    ],
+    "without": [
+      {
+        "seed": 2,
+        "routing_cost": 46884,
+        "bends": 59,
+        "crossings": 64,
+        "hpwl": 367
+      },
+      {
+        "seed": 5,
+        "routing_cost": 54272,
+        "bends": 53,
+        "crossings": 75,
+        "hpwl": 427
+      },
+      {
+        "seed": 1,
+        "routing_cost": 52642,
+        "bends": 81,
+        "crossings": 80,
+        "hpwl": 291
+      },
+      {
+        "seed": 3,
+        "routing_cost": 47190,
+        "bends": 61,
+        "crossings": 46,
+        "hpwl": 322
+      },
+      {
+        "seed": 6,
+        "routing_cost": 26998,
+        "bends": 45,
+        "crossings": 27,
+        "hpwl": 269
+      },
+      {
+        "seed": 7,
+        "routing_cost": 54899,
+        "bends": 64,
+        "crossings": 87,
+        "hpwl": 312
+      },
+      {
+        "seed": 4,
+        "routing_cost": 56204,
+        "bends": 87,
+        "crossings": 69,
+        "hpwl": 350
+      },
+      {
+        "seed": 8,
+        "routing_cost": 46428,
+        "bends": 60,
+        "crossings": 82,
+        "hpwl": 492
+      },
+      {
+        "seed": 9,
+        "routing_cost": 48900,
+        "bends": 64,
+        "crossings": 73,
+        "hpwl": 335
+      },
+      {
+        "seed": 10,
+        "routing_cost": 43592,
+        "bends": 72,
+        "crossings": 68,
+        "hpwl": 340
+      }
+    ]
+  },
+  "15": {
+    "with": [
+      {
+        "seed": 1,
+        "routing_cost": 11887,
+        "bends": 23,
+        "crossings": 19,
+        "hpwl": 182
+      },
+      {
+        "seed": 2,
+        "routing_cost": 12037,
+        "bends": 23,
+        "crossings": 19,
+        "hpwl": 182
+      },
+      {
+        "seed": 3,
+        "routing_cost": 11887,
+        "bends": 23,
+        "crossings": 19,
+        "hpwl": 182
+      },
+      {
+        "seed": 4,
+        "routing_cost": 12672,
+        "bends": 23,
+        "crossings": 19,
+        "hpwl": 182
+      },
+      {
+        "seed": 5,
+        "routing_cost": 11887,
+        "bends": 23,
+        "crossings": 19,
+        "hpwl": 182
+      },
+      {
+        "seed": 6,
+        "routing_cost": 11887,
+        "bends": 23,
+        "crossings": 19,
+        "hpwl": 182
+      },
+      {
+        "seed": 9,
+        "routing_cost": 12037,
+        "bends": 23,
+        "crossings": 19,
+        "hpwl": 182
+      },
+      {
+        "seed": 8,
+        "routing_cost": 12037,
+        "bends": 23,
+        "crossings": 19,
+        "hpwl": 182
+      },
+      {
+        "seed": 7,
+        "routing_cost": 11887,
+        "bends": 23,
+        "crossings": 19,
+        "hpwl": 182
+      },
+      {
+        "seed": 10,
+        "routing_cost": 12037,
+        "bends": 23,
+        "crossings": 19,
+        "hpwl": 182
+      }
+    ],
+    "without": [
+      {
+        "seed": 1,
+        "routing_cost": 25574,
+        "bends": 37,
+        "crossings": 20,
+        "hpwl": 143
+      },
+      {
+        "seed": 3,
+        "routing_cost": 20239,
+        "bends": 40,
+        "crossings": 14,
+        "hpwl": 149
+      },
+      {
+        "seed": 2,
+        "routing_cost": 21803,
+        "bends": 49,
+        "crossings": 34,
+        "hpwl": 153
+      },
+      {
+        "seed": 4,
+        "routing_cost": 22466,
+        "bends": 52,
+        "crossings": 35,
+        "hpwl": 182
+      },
+      {
+        "seed": 5,
+        "routing_cost": 30308,
+        "bends": 39,
+        "crossings": 34,
+        "hpwl": 205
+      },
+      {
+        "seed": 6,
+        "routing_cost": 16405,
+        "bends": 31,
+        "crossings": 14,
+        "hpwl": 185
+      },
+      {
+        "seed": 7,
+        "routing_cost": 24266,
+        "bends": 45,
+        "crossings": 24,
+        "hpwl": 178
+      },
+      {
+        "seed": 8,
+        "routing_cost": 29411,
+        "bends": 39,
+        "crossings": 24,
+        "hpwl": 200
+      },
+      {
+        "seed": 9,
+        "routing_cost": 31490,
+        "bends": 47,
+        "crossings": 28,
+        "hpwl": 157
+      },
+      {
+        "seed": 10
+      }
+    ]
+  }
+}

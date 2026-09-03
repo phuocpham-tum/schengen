@@ -1,0 +1,30 @@
+{
+    "subcircuit_info": "{\n}\n",
+    "partitioning_info": "{\n\"firstStage\": [],\n\"secondStage\": [],\n\"thirdStage\": [],\n\"stageBias\": [],\n\"loads\": []\n}\n",
+    "llm_generated": "[[\"right_of\", \"m2\", \"m1\"], [\"right_of\", \"m18\", \"m2\"], [\"right_of\", \"m22\", \"m18\"], [\"right_of\", \"m24\", \"m1\"], [\"right_of\", \"m28\", \"m24\"], [\"left_of\", \"m24\", \"m18\"], [\"above\", \"m4\", \"m1\"], [\"below\", \"r1\", \"m1\"], [\"below\", \"r2\", \"m2\"], [\"above\", \"m19\", \"m18\"], [\"below\", \"m21\", \"m19\"], [\"below\", \"m22\", \"m21\"], [\"above\", \"m23\", \"m22\"], [\"above\", \"m25\", \"m24\"], [\"below\", \"m27\", \"m25\"], [\"below\", \"m28\", \"m27\"], [\"above\", \"m29\", \"m28\"], [\"above\", \"m7\", \"m6\"], [\"above\", \"m8\", \"m9\"], [\"above\", \"m12\", \"m11\"], [\"above\", \"m13\", \"m14\"], [\"above\", \"m16\", \"m15\"], [\"above\", \"m3\", \"m17\"], [\"row_proximity\", 1, \"m1\", \"m2\"], [\"row_proximity\", 1, \"r1\", \"r2\"], [\"row_proximity\", 1, \"m18\", \"m24\"], [\"row_proximity\", 1, \"m19\", \"m25\"], [\"row_proximity\", 1, \"m21\", \"m27\"], [\"row_proximity\", 1, \"m22\", \"m28\"], [\"row_proximity\", 1, \"m23\", \"m29\"], [\"column_proximity\", 2, \"m1\", \"m24\"], [\"column_proximity\", 2, \"m2\", \"m18\"], [\"column_proximity\", 2, \"m22\", \"m23\"], [\"column_proximity\", 2, \"m28\", \"m29\"], [\"cluster_proximity\", 3, \"m6\", \"m7\", \"m8\", \"m9\", \"m10\", \"m11\", \"m12\", \"m13\", \"m14\", \"m15\", \"m16\", \"m17\", \"m3\"], [\"cluster_proximity\", 3, \"m18\", \"m19\", \"m20\", \"m21\", \"m22\", \"m23\", \"c1\", \"c2\"], [\"cluster_proximity\", 3, \"m24\", \"m25\", \"m26\", \"m27\", \"m28\", \"m29\", \"c3\", \"c4\"], [\"above_all\", 2, \"m3\"], [\"below_all\", 2, \"r1\"], [\"middle_all\", \"m1\"], [\"same_row\", \"m1\", \"m2\"], [\"same_row\", \"r1\", \"r2\"], [\"same_row\", \"m18\", \"m24\"], [\"same_row\", \"m19\", \"m25\"], [\"same_row\", \"m21\", \"m27\"], [\"same_row\", \"m22\", \"m28\"], [\"same_row\", \"m23\", \"m29\"], [\"same_column\", \"m4\", \"m17\"], [\"same_column\", \"m13\", \"m14\"], [\"same_column\", \"m16\", \"m15\"], [\"same_column_above\", \"m4\", \"m1\"], [\"same_column_above\", \"m19\", \"m20\"], [\"same_column_below\", \"m21\", \"m19\"], [\"same_column_below\", \"m22\", \"m21\"], [\"same_column_above\", \"m23\", \"m22\"], [\"same_column_above\", \"m25\", \"m26\"], [\"same_column_below\", \"m27\", \"m25\"], [\"same_column_below\", \"m28\", \"m27\"], [\"same_column_above\", \"m29\", \"m28\"], [\"between_columns\", \"m4\", \"m1\", \"m2\"], [\"between_columns\", \"m3\", \"m13\", \"m16\"], [\"between_rows\", \"m21\", \"m19\", \"m22\"], [\"between_rows\", \"m27\", \"m25\", \"m28\"], [\"clear_row_between\", \"m1\", \"m2\"], [\"clear_row_between\", \"m18\", \"m24\"], [\"clear_row_between\", \"m19\", \"m25\"], [\"clear_row_between\", \"m21\", \"m27\"], [\"clear_row_between\", \"m22\", \"m28\"], [\"clear_row_between\", \"m23\", \"m29\"], [\"clear_column_between\", \"m4\", \"m1\"], [\"clear_column_between\", \"m19\", \"m22\"], [\"clear_column_between\", \"m25\", \"m28\"]]",
+    "user_defined": "[\n]\n",
+    "orientation_constraints": "{\n}\n",
+    "path_based_constraints": [
+        "CONSTRAINT_1_SHARE_DRAIN_SOURCE_CONNECTION",
+        "CONSTRAINT_2_SORT_VDD_GND_TRACABILITY",
+        "CONSTRAINT_3_SHARE_GATE_TO_GATE_CONNECTION",
+        "CONSTRAINT_6_PLACE_VDD_DIFFERENT_COLUMN",
+        "CONSTRAINT_7_DONT_PLACE_TOO_CLOSE_TO_BOUNDARIES",
+        "CONSTRAINT_8_PLACE_CAPACITORS_MIDDLE",
+        "CONSTRAINT_9_PLACE_INPUT_PORTS_LEFT",
+        "CONSTRAINT_10_PLACE_OUTPUT_PORTS_RIGHT",
+        "CONSTRAINT_11_PLACE_BIASING_PORTS_LEFT",
+        "CONSTRAINT_12_PLACE_VDD_PORTS_TOP_RIGHT",
+        "CONSTRAINT_4_SHARE_SOURCE_TO_SOURCE_CONNECTION",
+        "CONSTRAINT_5_PLACE_SEPARATELY_2"
+    ],
+    "terminals": [
+        "ibias",
+        "in1",
+        "in2",
+        "outp",
+        "outn",
+        "vdd!",
+        "gnd!"
+    ]
+}

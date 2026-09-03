@@ -1,0 +1,26 @@
+{
+    "subcircuit_info": "{\n\n}\n  ",
+    "partitioning_info": "{\n    \"firstStage\": [], \n    \"secondStage\": [], \n    \"thirdStage\": [], \n    \"stageBias\": [],\n    \"loads\": []\n}\n  ",
+    "llm_generated": "[[\"above_all\", 2, \"R6\"], [\"below_all\", 2, \"R7\"], [\"right_of\", \"Q3\", \"Q1\"], [\"right_of\", \"Q4\", \"Q3\"], [\"right_of\", \"Q5\", \"Q4\"], [\"right_of\", \"Q12\", \"Q5\"], [\"right_of\", \"Q14\", \"Q12\"], [\"right_of\", \"Q17\", \"Q14\"], [\"right_of\", \"Q18\", \"Q17\"], [\"right_of\", \"Q22\", \"Q18\"], [\"above\", \"R1\", \"Q1\"], [\"above\", \"R3\", \"Q3\"], [\"above\", \"Q2\", \"Q4\"], [\"above\", \"Q19\", \"Q20\"], [\"above\", \"Q21\", \"Q17\"], [\"below\", \"Q6\", \"Q1\"], [\"below\", \"R4\", \"Q1\"], [\"below\", \"Q25\", \"Q6\"], [\"below\", \"R16\", \"Q25\"], [\"below\", \"Q13\", \"Q3\"], [\"below\", \"Q23\", \"Q18\"], [\"below\", \"Q10\", \"Q7\"], [\"below\", \"Q16\", \"Q20\"], [\"left_of\", \"R12\", \"Q1\"], [\"left_of\", \"R21\", \"Q5\"], [\"right_of\", \"R11\", \"Q4\"], [\"right_of\", \"R23\", \"Q14\"], [\"row_proximity\", 2, \"Q1\", \"Q3\"], [\"row_proximity\", 2, \"Q3\", \"Q4\"], [\"row_proximity\", 2, \"Q4\", \"Q5\"], [\"row_proximity\", 2, \"Q5\", \"Q12\"], [\"row_proximity\", 2, \"Q12\", \"Q14\"], [\"row_proximity\", 2, \"Q14\", \"Q17\"], [\"row_proximity\", 2, \"Q17\", \"Q18\"], [\"row_proximity\", 2, \"Q18\", \"Q22\"], [\"column_proximity\", 2, \"R1\", \"Q1\"], [\"column_proximity\", 2, \"R3\", \"Q3\"], [\"column_proximity\", 2, \"R6\", \"Q4\"], [\"column_proximity\", 2, \"R11\", \"Q12\"], [\"column_proximity\", 2, \"R23\", \"Q14\"], [\"column_proximity\", 2, \"R16\", \"Q25\"], [\"column_proximity\", 2, \"R12\", \"Q1\"], [\"column_proximity\", 2, \"R21\", \"Q5\"], [\"cluster_proximity\", 3, \"Q1\", \"Q6\", \"Q25\", \"R4\"], [\"cluster_proximity\", 3, \"Q3\", \"Q4\", \"R3\", \"R2\", \"R15\"], [\"cluster_proximity\", 3, \"Q7\", \"Q10\", \"R8\", \"R7\"], [\"cluster_proximity\", 3, \"Q8\", \"Q9\", \"Q15\", \"Q24\", \"R14\", \"R18\"], [\"cluster_proximity\", 3, \"Q17\", \"Q18\", \"Q20\", \"Q21\", \"Q22\", \"Q23\", \"R20\", \"R22\", \"R19\"], [\"middle_all\", \"Q4\"], [\"same_row\", \"Q1\", \"Q3\"], [\"same_row\", \"Q3\", \"Q4\"], [\"same_row\", \"Q4\", \"Q5\"], [\"same_row\", \"Q5\", \"Q12\"], [\"same_row\", \"Q12\", \"Q14\"], [\"same_row\", \"Q14\", \"Q17\"], [\"same_row\", \"Q17\", \"Q18\"], [\"same_row\", \"Q18\", \"Q22\"], [\"same_column_above\", \"R1\", \"Q1\"], [\"same_column_above\", \"R3\", \"Q3\"], [\"same_column_above\", \"R6\", \"Q4\"], [\"same_column_above\", \"Q2\", \"Q4\"], [\"same_column_above\", \"Q19\", \"Q20\"], [\"same_column_above\", \"Q21\", \"Q17\"], [\"same_column_below\", \"Q6\", \"Q1\"], [\"same_column_below\", \"Q25\", \"Q6\"], [\"same_column_below\", \"R16\", \"Q25\"], [\"same_column_below\", \"Q13\", \"Q3\"], [\"same_column_below\", \"Q23\", \"Q18\"], [\"same_column_below\", \"Q16\", \"Q20\"], [\"between_columns\", \"Q4\", \"Q3\", \"Q5\"], [\"between_columns\", \"Q12\", \"Q5\", \"Q14\"], [\"between_columns\", \"Q18\", \"Q17\", \"Q22\"], [\"between_rows\", \"Q6\", \"Q1\", \"Q25\"], [\"between_rows\", \"Q13\", \"Q3\", \"Q23\"], [\"clear_column_between\", \"Q3\", \"Q4\"], [\"clear_column_between\", \"Q4\", \"Q5\"], [\"clear_column_between\", \"Q12\", \"Q14\"], [\"clear_column_between\", \"Q17\", \"Q18\"], [\"clear_row_between\", \"R1\", \"Q1\"], [\"clear_row_between\", \"R3\", \"Q3\"], [\"clear_row_between\", \"Q6\", \"Q25\"], [\"t_junction\", \"Q4\", \"Q3\", \"Q5\"], [\"t_junction\", \"Q12\", \"Q5\", \"Q14\"], [\"t_junction\", \"Q18\", \"Q17\", \"Q22\"]]",
+    "user_defined": "[\n[\"above_all\", 1, \"terminal_+15V\"],\n[\"below_all\", 1, \"terminal_-15V\"],\n[\"middle_all\", \"terminal_GND\"]\n]\n                ",
+    "orientation_constraints": "{\n\n}\n                ",
+    "path_based_constraints": [
+        "CONSTRAINT_1_SHARE_DRAIN_SOURCE_CONNECTION",
+        "CONSTRAINT_3_SHARE_GATE_TO_GATE_CONNECTION",
+        "CONSTRAINT_6_PLACE_VDD_DIFFERENT_COLUMN",
+        "CONSTRAINT_7_DONT_PLACE_TOO_CLOSE_TO_BOUNDARIES",
+        "CONSTRAINT_8_PLACE_CAPACITORS_MIDDLE",
+        "CONSTRAINT_9_PLACE_INPUT_PORTS_LEFT",
+        "CONSTRAINT_10_PLACE_OUTPUT_PORTS_RIGHT",
+        "CONSTRAINT_11_PLACE_BIASING_PORTS_LEFT",
+        "CONSTRAINT_12_PLACE_VDD_PORTS_TOP_RIGHT",
+        "CONSTRAINT_5_PLACE_SEPARATELY_3"
+    ],
+    "terminals": [
+        "net_output_0",
+        "net_input_0",
+        "+15V",
+        "-15V",
+        "GND"
+    ]
+}

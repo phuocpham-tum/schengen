@@ -1,0 +1,26 @@
+{
+  "subcircuit_info": "{\n\n}\n  ",
+  "partitioning_info": "{\n    \"firstStage\": [], \n    \"secondStage\": [], \n    \"thirdStage\": [], \n    \"stageBias\": [],\n    \"loads\": []\n}\n  ",
+  "llm_generated": "[\n\n]\n                ",
+  "user_defined": "[\n[\"above_all\", 1, \"terminal_+15V\"],\n[\"below_all\", 1, \"terminal_-15V\"],\n[\"middle_all\", \"terminal_GND\"]\n]\n                ",
+  "orientation_constraints": "{\n\n}\n                ",
+  "path_based_constraints": [
+    "CONSTRAINT_1_SHARE_DRAIN_SOURCE_CONNECTION",
+    "CONSTRAINT_3_SHARE_GATE_TO_GATE_CONNECTION",
+    "CONSTRAINT_6_PLACE_VDD_DIFFERENT_COLUMN",
+    "CONSTRAINT_7_DONT_PLACE_TOO_CLOSE_TO_BOUNDARIES",
+    "CONSTRAINT_8_PLACE_CAPACITORS_MIDDLE",
+    "CONSTRAINT_9_PLACE_INPUT_PORTS_LEFT",
+    "CONSTRAINT_10_PLACE_OUTPUT_PORTS_RIGHT",
+    "CONSTRAINT_11_PLACE_BIASING_PORTS_LEFT",
+    "CONSTRAINT_12_PLACE_VDD_PORTS_TOP_RIGHT",
+    "CONSTRAINT_5_PLACE_SEPARATELY_3"
+  ],
+  "terminals": [
+    "net_output_0",
+    "net_input_0",
+    "+15V",
+    "-15V",
+    "GND"
+  ]
+}
