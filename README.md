@@ -10,6 +10,10 @@
 
 ## Overview
 
+> [!NOTE]
+> The supplementary material for `schengen`, including GUI screenshots, per-circuit details, and the constraint list, is available at [paper/supplementary.pdf](paper/supplementary.pdf).
+
+
 **schengen** is an open-source **Netlist-to-Schematic Conversion** tool designed specifically for analog SPICE netlists/components.
 
 We aim to provide a tool for schematic generation from SPICE input netlists using predefined constraint primitives and an iterative web-based interface.
